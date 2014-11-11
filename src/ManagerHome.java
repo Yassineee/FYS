@@ -1,16 +1,17 @@
-/*
+ /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 /**
  *
- * @author Yassinee
+ * @author Jasper
  */
 public class ManagerHome extends javax.swing.JPanel {
 
     /**
-     * Creates new form ManagerHome
+     * Creates new form NewJPanel
      */
     public ManagerHome() {
         initComponents();
@@ -25,19 +26,99 @@ public class ManagerHome extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 738, Short.MAX_VALUE)
+        jPanel1 = new javax.swing.JPanel();
+        log = new javax.swing.JLabel();
+        loginId = new javax.swing.JLabel();
+        logOut = new javax.swing.JButton();
+        graphs = new javax.swing.JLabel();
+        home = new javax.swing.JLabel();
+        logFiles = new javax.swing.JLabel();
+        status = new javax.swing.JLabel();
+        help = new javax.swing.JLabel();
+        achtergrond = new javax.swing.JLabel();
+
+        setBackground(new java.awt.Color(255, 255, 255));
+        setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        setMinimumSize(new java.awt.Dimension(735, 510));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        log.setText("Logged in as:");
+
+        loginId.setText("Employee ID:");
+
+        logOut.setText("Log out");
+        logOut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logOutActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(log, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(185, 185, 185)
+                .addComponent(loginId)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 292, Short.MAX_VALUE)
+                .addComponent(logOut)
+                .addContainerGap())
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 371, Short.MAX_VALUE)
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(log, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(loginId, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(logOut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
+
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 700, 20));
+
+        graphs.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        graphs.setForeground(new java.awt.Color(255, 255, 255));
+        graphs.setText("Graphs");
+        add(graphs, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 60, 40));
+
+        home.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        home.setForeground(new java.awt.Color(255, 255, 255));
+        home.setText("Home");
+        add(home, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 50, 40));
+
+        logFiles.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        logFiles.setForeground(new java.awt.Color(255, 255, 255));
+        logFiles.setText("Log Files");
+        add(logFiles, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 0, -1, 40));
+
+        status.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        status.setForeground(new java.awt.Color(255, 255, 255));
+        status.setText("Status");
+        add(status, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 0, -1, 40));
+
+        help.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        help.setForeground(new java.awt.Color(255, 255, 255));
+        help.setText("Help");
+        add(help, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 10, -1, -1));
+
+        achtergrond.setIcon(new javax.swing.ImageIcon("C:\\Users\\Jasper\\Documents\\School\\Project\\Plaatje\\Achtgrond4.png")); // NOI18N
+        add(achtergrond, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void logOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logOutActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_logOutActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel achtergrond;
+    private javax.swing.JLabel graphs;
+    private javax.swing.JLabel help;
+    private javax.swing.JLabel home;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel log;
+    private javax.swing.JLabel logFiles;
+    private javax.swing.JButton logOut;
+    private javax.swing.JLabel loginId;
+    private javax.swing.JLabel status;
     // End of variables declaration//GEN-END:variables
 }
