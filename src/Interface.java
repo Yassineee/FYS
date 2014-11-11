@@ -1,3 +1,5 @@
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -10,6 +12,7 @@
  */
 public class Interface extends javax.swing.JFrame {
 
+    int xMouse, yMouse;
     /**
      * Creates new form Interface
      */
@@ -27,12 +30,12 @@ public class Interface extends javax.swing.JFrame {
     private void initComponents() {
         bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
+        Username = new javax.swing.JTextField();
+        password = new javax.swing.JPasswordField();
+        Login = new javax.swing.JLabel();
         Mini = new javax.swing.JLabel();
         Exit = new javax.swing.JLabel();
-        button1 = new java.awt.Button();
-        textField1 = new java.awt.TextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        Logo = new javax.swing.JLabel();
+        DragFrame = new javax.swing.JLabel();
         Achtergrond = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -41,64 +44,79 @@ public class Interface extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Mini.setText("jLabel1");
+        Username.setBackground(new java.awt.Color(111, 13, 17));
+        Username.setForeground(new java.awt.Color(255, 255, 255));
+        Username.setText("Username");
+        Username.setOpaque(false);
+        Username.setPreferredSize(new java.awt.Dimension(277, 23));
+        Username.setSelectionColor(new java.awt.Color(138, 11, 11));
+        Username.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UsernameActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Username, new org.netbeans.lib.awtextra.AbsoluteConstraints(76, 150, -1, -1));
+
+        password.setBackground(new java.awt.Color(111, 13, 17));
+        password.setForeground(new java.awt.Color(255, 255, 255));
+        password.setText("jPasswordField1");
+        password.setName(""); // NOI18N
+        password.setOpaque(false);
+        password.setPreferredSize(new java.awt.Dimension(277, 23));
+        password.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passwordActionPerformed(evt);
+            }
+        });
+        getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(76, 197, -1, -1));
+
+        Login.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Login.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LoginMouseClicked(evt);
+            }
+        });
+        getContentPane().add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(305, 235, 50, 20));
+
         Mini.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Mini.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 MiniMouseClicked(evt);
             }
         });
-        getContentPane().add(Mini, new org.netbeans.lib.awtextra.AbsoluteConstraints(666, 2, 10, 10));
+        getContentPane().add(Mini, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 3, 20, 20));
 
-        Exit.setText("jLabel1");
         Exit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Exit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ExitMouseClicked(evt);
             }
         });
-        getContentPane().add(Exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(683, 2, 10, 10));
+        getContentPane().add(Exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(577, 3, 20, 20));
 
-        button1.setActionCommand("Login");
-        button1.setLabel("Login");
-        button1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                button1ActionPerformed(evt);
+        DragFrame.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                DragFrameMouseDragged(evt);
             }
         });
-        getContentPane().add(button1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 350, -1, -1));
-
-        textField1.setText("textField1");
-        textField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textField1ActionPerformed(evt);
+        DragFrame.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                DragFrameMousePressed(evt);
             }
         });
-        getContentPane().add(textField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, 140, -1));
+        getContentPane().add(DragFrame, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 30));
 
-        jPasswordField1.setText("jPasswordField1");
-        getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(281, 310, 140, -1));
-
-        Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CorendonLogo.png"))); // NOI18N
-        Logo.setText("jLabel2");
-        getContentPane().add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 200, -1));
-
-        Achtergrond.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Achtergrond3.png"))); // NOI18N
-        Achtergrond.setText("jLabel1");
+        Achtergrond.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/LoginScherm2.png"))); // NOI18N
 
         org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, Achtergrond, org.jdesktop.beansbinding.ELProperty.create("${background}"), Achtergrond, org.jdesktop.beansbinding.BeanProperty.create("background"));
         bindingGroup.addBinding(binding);
 
-        getContentPane().add(Achtergrond, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 698, 500));
+        getContentPane().add(Achtergrond, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, -1));
 
         bindingGroup.bind();
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
-        
-    }//GEN-LAST:event_button1ActionPerformed
 
     private void MiniMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MiniMouseClicked
         this.setState(Interface.ICONIFIED);
@@ -109,9 +127,29 @@ public class Interface extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_ExitMouseClicked
 
-    private void textField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textField1ActionPerformed
+    private void DragFrameMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DragFrameMousePressed
+        xMouse = evt.getX();
+        yMouse = evt.getY();
+    }//GEN-LAST:event_DragFrameMousePressed
+
+    private void DragFrameMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DragFrameMouseDragged
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        
+        this.setLocation(x - xMouse, y - yMouse);
+    }//GEN-LAST:event_DragFrameMouseDragged
+
+    private void LoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_textField1ActionPerformed
+    }//GEN-LAST:event_LoginMouseClicked
+
+    private void UsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsernameActionPerformed
+        
+    }//GEN-LAST:event_UsernameActionPerformed
+
+    private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passwordActionPerformed
 
     /**
      * @param args the command line arguments
@@ -150,12 +188,12 @@ public class Interface extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Achtergrond;
+    private javax.swing.JLabel DragFrame;
     private javax.swing.JLabel Exit;
-    private javax.swing.JLabel Logo;
+    private javax.swing.JLabel Login;
     private javax.swing.JLabel Mini;
-    private java.awt.Button button1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private java.awt.TextField textField1;
+    private javax.swing.JTextField Username;
+    private javax.swing.JPasswordField password;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }
