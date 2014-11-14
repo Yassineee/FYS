@@ -9,6 +9,7 @@
  */
 public class Login extends javax.swing.JFrame {
 
+    int xMouse, yMouse;
     /**
      * Creates new form Login
      */
@@ -28,7 +29,7 @@ public class Login extends javax.swing.JFrame {
 
         Mini = new javax.swing.JLabel();
         Exit = new javax.swing.JLabel();
-        Dragframe = new javax.swing.JLabel();
+        DragFrame = new javax.swing.JLabel();
         Username = new javax.swing.JTextField();
         jPasswordField1 = new javax.swing.JPasswordField();
         Login = new javax.swing.JLabel();
@@ -37,9 +38,34 @@ public class Login extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Mini.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Mini.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MiniMouseClicked(evt);
+            }
+        });
         getContentPane().add(Mini, new org.netbeans.lib.awtextra.AbsoluteConstraints(553, 4, 16, 17));
+
+        Exit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Exit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ExitMouseClicked(evt);
+            }
+        });
         getContentPane().add(Exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 4, 16, 17));
-        getContentPane().add(Dragframe, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 30));
+
+        DragFrame.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                DragFrameMouseDragged(evt);
+            }
+        });
+        DragFrame.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                DragFrameMousePressed(evt);
+            }
+        });
+        getContentPane().add(DragFrame, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 30));
 
         Username.setBackground(new java.awt.Color(111, 13, 17));
         Username.setForeground(new java.awt.Color(250, 250, 250));
@@ -55,6 +81,8 @@ public class Login extends javax.swing.JFrame {
         jPasswordField1.setForeground(new java.awt.Color(250, 250, 250));
         jPasswordField1.setText("jPasswordField1");
         getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(77, 197, 277, 23));
+
+        Login.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 234, 40, 20));
 
         Achtergrond.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/LoginScherm2.png"))); // NOI18N
@@ -73,6 +101,26 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_UsernameActionPerformed
 
+    private void ExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_ExitMouseClicked
+
+    private void MiniMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MiniMouseClicked
+        this.setState(Interface.ICONIFIED);
+    }//GEN-LAST:event_MiniMouseClicked
+
+    private void DragFrameMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DragFrameMousePressed
+        xMouse = evt.getX();
+        yMouse = evt.getY();
+    }//GEN-LAST:event_DragFrameMousePressed
+
+    private void DragFrameMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DragFrameMouseDragged
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        
+        this.setLocation(x - xMouse, y - yMouse);
+    }//GEN-LAST:event_DragFrameMouseDragged
+                                      
     /**
      * @param args the command line arguments
      */
@@ -110,7 +158,7 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Achtergrond;
-    private javax.swing.JLabel Dragframe;
+    private javax.swing.JLabel DragFrame;
     private javax.swing.JLabel Exit;
     private javax.swing.JLabel Login;
     private javax.swing.JLabel Mini;
