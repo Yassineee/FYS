@@ -76,13 +76,16 @@
           <Color blue="fa" green="fa" red="fa" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Username"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="null"/>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="UsernameActionPerformed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="77" y="149" width="277" height="23"/>
+          <AbsoluteConstraints x="83" y="152" width="250" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -95,10 +98,13 @@
           <Color blue="fa" green="fa" red="fa" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jPasswordField1"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="null"/>
+        </Property>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="77" y="197" width="277" height="23"/>
+          <AbsoluteConstraints x="83" y="200" width="250" height="20"/>
         </Constraint>
       </Constraints>
     </Component>

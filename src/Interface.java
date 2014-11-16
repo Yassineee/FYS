@@ -47,19 +47,21 @@ public class Interface extends javax.swing.JFrame {
         Username.setBackground(new java.awt.Color(111, 13, 17));
         Username.setForeground(new java.awt.Color(255, 255, 255));
         Username.setText("Username");
+        Username.setBorder(null);
         Username.setOpaque(false);
         Username.setPreferredSize(new java.awt.Dimension(277, 23));
-        Username.setSelectionColor(new java.awt.Color(138, 11, 11));
+        Username.setSelectionColor(new java.awt.Color(130, 20, 20));
         Username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 UsernameActionPerformed(evt);
             }
         });
-        getContentPane().add(Username, new org.netbeans.lib.awtextra.AbsoluteConstraints(76, 150, -1, -1));
+        getContentPane().add(Username, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 152, 250, 20));
 
         password.setBackground(new java.awt.Color(111, 13, 17));
         password.setForeground(new java.awt.Color(255, 255, 255));
         password.setText("jPasswordField1");
+        password.setBorder(null);
         password.setName(""); // NOI18N
         password.setOpaque(false);
         password.setPreferredSize(new java.awt.Dimension(277, 23));
@@ -68,7 +70,7 @@ public class Interface extends javax.swing.JFrame {
                 passwordActionPerformed(evt);
             }
         });
-        getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(76, 197, -1, -1));
+        getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 200, 250, 20));
 
         Login.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Login.addMouseListener(new java.awt.event.MouseAdapter() {

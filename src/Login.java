@@ -70,17 +70,19 @@ public class Login extends javax.swing.JFrame {
         Username.setBackground(new java.awt.Color(111, 13, 17));
         Username.setForeground(new java.awt.Color(250, 250, 250));
         Username.setText("Username");
+        Username.setBorder(null);
         Username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 UsernameActionPerformed(evt);
             }
         });
-        getContentPane().add(Username, new org.netbeans.lib.awtextra.AbsoluteConstraints(77, 149, 277, 23));
+        getContentPane().add(Username, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 152, 250, 20));
 
         jPasswordField1.setBackground(new java.awt.Color(111, 13, 17));
         jPasswordField1.setForeground(new java.awt.Color(250, 250, 250));
         jPasswordField1.setText("jPasswordField1");
-        getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(77, 197, 277, 23));
+        jPasswordField1.setBorder(null);
+        getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 200, 250, 20));
 
         Login.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 234, 40, 20));
