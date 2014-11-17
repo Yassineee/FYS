@@ -27,116 +27,77 @@ public class Employee extends javax.swing.JFrame {
     private void initComponents() {
         bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        Mini = new javax.swing.JLabel();
-        Exit = new javax.swing.JLabel();
-        DragFrame = new javax.swing.JLabel();
+        Name = new javax.swing.JLabel();
+        ID = new javax.swing.JLabel();
+        Logout = new javax.swing.JButton();
+        Home = new javax.swing.JLabel();
+        Search = new javax.swing.JLabel();
+        AddBaggage = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
+        setTitle("Lost Baggage");
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+        Name.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Name.setText("Logged in as:");
+        getContentPane().add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 140, 50));
 
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel2.setText("Username:");
+        ID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        ID.setText("Employee ID:");
+        getContentPane().add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 140, 130, 50));
 
-        jLabel3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel3.setText("Logged in as:");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(417, 417, 417)
-                .addComponent(jLabel2)
-                .addContainerGap(874, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(20, 20, 20)
-                    .addComponent(jLabel3)
-                    .addContainerGap(1252, Short.MAX_VALUE)))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
-        );
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 94, 1366, 30));
-
-        Mini.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Mini.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                MiniMouseClicked(evt);
+        Logout.setBackground(new java.awt.Color(151, 51, 51));
+        Logout.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Logout.setText("Logout");
+        Logout.setToolTipText("blablabla");
+        Logout.setBorder(null);
+        Logout.setBorderPainted(false);
+        Logout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LogoutActionPerformed(evt);
             }
         });
-        getContentPane().add(Mini, new org.netbeans.lib.awtextra.AbsoluteConstraints(1300, 0, 30, 30));
+        getContentPane().add(Logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(1590, 150, 80, 30));
 
-        Exit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Exit.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ExitMouseClicked(evt);
-            }
-        });
-        getContentPane().add(Exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(1330, 0, 30, 30));
+        Home.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Home.setText("Home");
+        getContentPane().add(Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 310, 70, 30));
 
-        DragFrame.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseDragged(java.awt.event.MouseEvent evt) {
-                DragFrameMouseDragged(evt);
-            }
-        });
-        DragFrame.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                DragFrameMousePressed(evt);
-            }
-        });
-        getContentPane().add(DragFrame, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 20));
+        Search.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Search.setText("Search");
+        getContentPane().add(Search, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 390, 90, 40));
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(240, 240, 240));
-        jLabel1.setText("Employee");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 30, 130, 50));
+        AddBaggage.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        AddBaggage.setText("Add baggage");
+        getContentPane().add(AddBaggage, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 480, -1, -1));
 
-        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Wolken layout.png"))); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel1.setText("Submit request");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 570, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel2.setText("Help");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 660, -1, -1));
+
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/layoutCorendonFinalVeranderd.png"))); // NOI18N
 
         org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, Background, org.jdesktop.beansbinding.ELProperty.create("${background}"), Background, org.jdesktop.beansbinding.BeanProperty.create("background"));
         bindingGroup.addBinding(binding);
 
-        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1680, 1040));
 
         bindingGroup.bind();
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitMouseClicked
-        System.exit(0);
-    }//GEN-LAST:event_ExitMouseClicked
-
-    private void MiniMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MiniMouseClicked
-        this.setState(Interface.ICONIFIED);
-
-    }//GEN-LAST:event_MiniMouseClicked
-
-    private void DragFrameMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DragFrameMouseDragged
-        int x = evt.getXOnScreen();
-        int y = evt.getYOnScreen();
-
-        this.setLocation(x - xMouse, y - yMouse);
-    }//GEN-LAST:event_DragFrameMouseDragged
-
-    private void DragFrameMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DragFrameMousePressed
-        xMouse = evt.getX();
-        yMouse = evt.getY();
-    }//GEN-LAST:event_DragFrameMousePressed
+    private void LogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoutActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LogoutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -174,14 +135,15 @@ public class Employee extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel AddBaggage;
     private javax.swing.JLabel Background;
-    private javax.swing.JLabel DragFrame;
-    private javax.swing.JLabel Exit;
-    private javax.swing.JLabel Mini;
+    private javax.swing.JLabel Home;
+    private javax.swing.JLabel ID;
+    private javax.swing.JButton Logout;
+    private javax.swing.JLabel Name;
+    private javax.swing.JLabel Search;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }
