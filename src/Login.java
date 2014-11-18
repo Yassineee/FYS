@@ -108,7 +108,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_ExitMouseClicked
 
     private void MiniMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MiniMouseClicked
-        this.setState(Interface.ICONIFIED);
+        this.setState(Main.ICONIFIED);
     }//GEN-LAST:event_MiniMouseClicked
 
     private void DragFrameMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DragFrameMousePressed
