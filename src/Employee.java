@@ -48,11 +48,11 @@ public class Employee extends javax.swing.JFrame {
 
         Name.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Name.setText("Logged in as:");
-        getContentPane().add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 140, 50));
+        getContentPane().add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 130, 50));
 
         ID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         ID.setText("Employee ID:");
-        getContentPane().add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 140, 130, 50));
+        getContentPane().add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 80, 140, 50));
 
         Logout.setBackground(new java.awt.Color(151, 51, 51));
         Logout.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -65,34 +65,34 @@ public class Employee extends javax.swing.JFrame {
                 LogoutActionPerformed(evt);
             }
         });
-        getContentPane().add(Logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(1590, 150, 80, 30));
+        getContentPane().add(Logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(1220, 90, 70, 30));
 
         Home.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         Home.setText("Home");
-        getContentPane().add(Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 310, 70, 30));
+        getContentPane().add(Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 70, 30));
 
         Search.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         Search.setText("Search");
-        getContentPane().add(Search, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 390, 90, 40));
+        getContentPane().add(Search, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, 90, 40));
 
         AddBaggage.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         AddBaggage.setText("Add baggage");
-        getContentPane().add(AddBaggage, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 480, -1, -1));
+        getContentPane().add(AddBaggage, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setText("Submit request");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 570, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel2.setText("Help");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 660, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 480, -1, -1));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/layoutCorendonFinalVeranderd.png"))); // NOI18N
 
         org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, Background, org.jdesktop.beansbinding.ELProperty.create("${background}"), Background, org.jdesktop.beansbinding.BeanProperty.create("background"));
         bindingGroup.addBinding(binding);
 
-        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -190, 1300, 1040));
+        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1300, 650));
 
         bindingGroup.bind();
 
