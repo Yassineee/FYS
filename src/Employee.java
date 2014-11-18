@@ -48,11 +48,11 @@ public class Employee extends javax.swing.JFrame {
 
         Name.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Name.setText("Logged in as:");
-        getContentPane().add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 140, 50));
+        getContentPane().add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 140, 50));
 
         ID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         ID.setText("Employee ID:");
-        getContentPane().add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 80, 130, 50));
+        getContentPane().add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 140, 130, 50));
 
         Logout.setBackground(new java.awt.Color(151, 51, 51));
         Logout.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -65,7 +65,7 @@ public class Employee extends javax.swing.JFrame {
                 LogoutActionPerformed(evt);
             }
         });
-        getContentPane().add(Logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 100, 80, 30));
+        getContentPane().add(Logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(1590, 150, 80, 30));
 
         Home.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         Home.setText("Home");
