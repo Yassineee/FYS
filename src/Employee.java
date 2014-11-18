@@ -48,7 +48,7 @@ public class Employee extends javax.swing.JFrame {
 
         Name.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Name.setText("Logged in as:");
-        getContentPane().add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 140, 50));
+        getContentPane().add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 140, 50));
 
         ID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         ID.setText("Employee ID:");
@@ -69,15 +69,15 @@ public class Employee extends javax.swing.JFrame {
 
         Home.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         Home.setText("Home");
-        getContentPane().add(Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 310, 70, 30));
+        getContentPane().add(Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 70, 30));
 
         Search.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         Search.setText("Search");
-        getContentPane().add(Search, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 390, 90, 40));
+        getContentPane().add(Search, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 90, 40));
 
         AddBaggage.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         AddBaggage.setText("Add baggage");
-        getContentPane().add(AddBaggage, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 480, -1, -1));
+        getContentPane().add(AddBaggage, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setText("Submit request");
@@ -92,7 +92,7 @@ public class Employee extends javax.swing.JFrame {
         org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, Background, org.jdesktop.beansbinding.ELProperty.create("${background}"), Background, org.jdesktop.beansbinding.BeanProperty.create("background"));
         bindingGroup.addBinding(binding);
 
-        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -190, 1300, 1040));
+        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, 850));
 
         bindingGroup.bind();
 

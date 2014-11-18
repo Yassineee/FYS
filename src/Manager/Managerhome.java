@@ -1,3 +1,5 @@
+package Manager;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -25,14 +27,54 @@ public class Managerhome extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Name = new javax.swing.JLabel();
+        Home = new javax.swing.JLabel();
+        Search = new javax.swing.JLabel();
+        AddBaggage = new javax.swing.JLabel();
+        AddBaggage1 = new javax.swing.JLabel();
+        AddBaggage2 = new javax.swing.JLabel();
+        AddBaggage3 = new javax.swing.JLabel();
+        ID = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        Name.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Name.setText("Logged in as:");
+        getContentPane().add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 140, 50));
+
+        Home.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Home.setText("Home");
+        getContentPane().add(Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 70, 30));
+
+        Search.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Search.setText("Search");
+        getContentPane().add(Search, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 90, 40));
+
+        AddBaggage.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        AddBaggage.setText("Help");
+        getContentPane().add(AddBaggage, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 550, -1, -1));
+
+        AddBaggage1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        AddBaggage1.setText("Graphs");
+        getContentPane().add(AddBaggage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 330, -1, -1));
+
+        AddBaggage2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        AddBaggage2.setText("Status");
+        getContentPane().add(AddBaggage2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 410, -1, -1));
+
+        AddBaggage3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        AddBaggage3.setText("Log files");
+        getContentPane().add(AddBaggage3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 480, -1, -1));
+
+        ID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        ID.setText("Employee ID:");
+        getContentPane().add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 90, 130, 50));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/layoutCorendonFinalVeranderd.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1300, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 1300, 740));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -73,6 +115,14 @@ public class Managerhome extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel AddBaggage;
+    private javax.swing.JLabel AddBaggage1;
+    private javax.swing.JLabel AddBaggage2;
+    private javax.swing.JLabel AddBaggage3;
+    private javax.swing.JLabel Home;
+    private javax.swing.JLabel ID;
+    private javax.swing.JLabel Name;
+    private javax.swing.JLabel Search;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
