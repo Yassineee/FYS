@@ -25,17 +25,75 @@ public class Managerhome extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Home = new javax.swing.JLabel();
+        help = new javax.swing.JLabel();
+        Search1 = new javax.swing.JLabel();
+        Graphs = new javax.swing.JLabel();
+        Logfiles = new javax.swing.JLabel();
+        Status = new javax.swing.JLabel();
+        ID = new javax.swing.JLabel();
+        Logout = new javax.swing.JButton();
+        Name = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        Home.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Home.setText("Home");
+        getContentPane().add(Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 70, 30));
+
+        help.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        help.setText("Help");
+        getContentPane().add(help, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 550, 60, 40));
+
+        Search1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Search1.setText("Search");
+        getContentPane().add(Search1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, 90, 40));
+
+        Graphs.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Graphs.setText("Graphs");
+        getContentPane().add(Graphs, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 330, 90, 40));
+
+        Logfiles.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Logfiles.setText("Log Files");
+        getContentPane().add(Logfiles, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 400, 110, 40));
+
+        Status.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Status.setText("Status");
+        getContentPane().add(Status, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 470, 110, 40));
+
+        ID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        ID.setText("Employee ID:");
+        getContentPane().add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 80, 130, 50));
+
+        Logout.setBackground(new java.awt.Color(151, 51, 51));
+        Logout.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Logout.setText("Logout");
+        Logout.setToolTipText("blablabla");
+        Logout.setBorder(null);
+        Logout.setBorderPainted(false);
+        Logout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LogoutActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 90, 80, 30));
+
+        Name.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Name.setText("Logged in as:");
+        getContentPane().add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 140, 50));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/layoutCorendonFinalVeranderd.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1300, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void LogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoutActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LogoutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -73,6 +131,15 @@ public class Managerhome extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Graphs;
+    private javax.swing.JLabel Home;
+    private javax.swing.JLabel ID;
+    private javax.swing.JLabel Logfiles;
+    private javax.swing.JButton Logout;
+    private javax.swing.JLabel Name;
+    private javax.swing.JLabel Search1;
+    private javax.swing.JLabel Status;
+    private javax.swing.JLabel help;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
