@@ -1,3 +1,7 @@
+
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,7 +12,7 @@
  * @author EdoTyran
  */
 public class Employee extends javax.swing.JFrame {
-
+    
     int xMouse, yMouse;
     /**
      * Creates new form Employee
@@ -88,7 +92,7 @@ public class Employee extends javax.swing.JFrame {
         org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, Background, org.jdesktop.beansbinding.ELProperty.create("${background}"), Background, org.jdesktop.beansbinding.BeanProperty.create("background"));
         bindingGroup.addBinding(binding);
 
-        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1680, 1040));
+        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -190, 1300, 1040));
 
         bindingGroup.bind();
 
@@ -146,4 +150,8 @@ public class Employee extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
+
+Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+double width = screenSize.getWidth();
+double height = screenSize.getHeight();
 }
