@@ -27,18 +27,49 @@ public class AdminHome extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        Home = new javax.swing.JLabel();
+        Home1 = new javax.swing.JLabel();
+        Home2 = new javax.swing.JLabel();
+        Home3 = new javax.swing.JLabel();
+        Home4 = new javax.swing.JLabel();
+        Home5 = new javax.swing.JLabel();
+        Name = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Home.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Home.setText("help");
+        getContentPane().add(Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 550, 50, 30));
+
+        Home1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Home1.setText("Home");
+        getContentPane().add(Home1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 70, 30));
+
+        Home2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Home2.setText("Search");
+        getContentPane().add(Home2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, 90, 30));
+
+        Home3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Home3.setText("Create Account");
+        getContentPane().add(Home3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 180, 30));
+
+        Home4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Home4.setText("Edit Account");
+        getContentPane().add(Home4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 480, 180, 30));
+
+        Home5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Home5.setText("Delete Account");
+        getContentPane().add(Home5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, 180, 30));
+
+        Name.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Name.setText("Logged in as:");
+        getContentPane().add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 140, 50));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/layoutCorendonFinalVeranderd.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1310, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -79,5 +110,13 @@ public class AdminHome extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Home;
+    private javax.swing.JLabel Home1;
+    private javax.swing.JLabel Home2;
+    private javax.swing.JLabel Home3;
+    private javax.swing.JLabel Home4;
+    private javax.swing.JLabel Home5;
+    private javax.swing.JLabel Name;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
