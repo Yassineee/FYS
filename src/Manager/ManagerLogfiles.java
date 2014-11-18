@@ -38,6 +38,7 @@ public class ManagerLogfiles extends javax.swing.JFrame {
         AddBaggage2 = new javax.swing.JLabel();
         AddBaggage3 = new javax.swing.JLabel();
         ID = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -46,7 +47,7 @@ public class ManagerLogfiles extends javax.swing.JFrame {
 
         Name.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Name.setText("Logged in as:");
-        getContentPane().add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 140, 50));
+        getContentPane().add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 140, 50));
 
         Home.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         Home.setText("Home");
@@ -68,16 +69,17 @@ public class ManagerLogfiles extends javax.swing.JFrame {
         AddBaggage2.setText("Status");
         getContentPane().add(AddBaggage2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 410, -1, -1));
 
-        AddBaggage3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        AddBaggage3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         AddBaggage3.setText("Log files");
         getContentPane().add(AddBaggage3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 480, -1, -1));
 
         ID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         ID.setText("Employee ID:");
         getContentPane().add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 90, 130, 50));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 330, 780, 220));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/layoutCorendonFinalVeranderd.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 1300, 740));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, 1300, 740));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -127,5 +129,6 @@ public class ManagerLogfiles extends javax.swing.JFrame {
     private javax.swing.JLabel Name;
     private javax.swing.JLabel Search;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

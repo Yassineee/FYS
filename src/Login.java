@@ -85,6 +85,11 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 200, 250, 20));
 
         Login.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Login.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LoginMouseClicked(evt);
+            }
+        });
         getContentPane().add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 234, 40, 20));
 
         Achtergrond.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/LoginScherm2.png"))); // NOI18N
@@ -122,6 +127,12 @@ public class Login extends javax.swing.JFrame {
         
         this.setLocation(x - xMouse, y - yMouse);
     }//GEN-LAST:event_DragFrameMouseDragged
+
+    private void LoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginMouseClicked
+
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_LoginMouseClicked
                                       
     /**
      * @param args the command line arguments
