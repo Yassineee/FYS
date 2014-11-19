@@ -56,7 +56,7 @@ public class ManagerHelp extends javax.swing.JFrame {
         Search.setText("Search");
         getContentPane().add(Search, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 90, 40));
 
-        AddBaggage.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        AddBaggage.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         AddBaggage.setText("Help");
         getContentPane().add(AddBaggage, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 550, -1, -1));
 

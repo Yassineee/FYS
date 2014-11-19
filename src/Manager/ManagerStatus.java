@@ -64,7 +64,7 @@ public class ManagerStatus extends javax.swing.JFrame {
         AddBaggage1.setText("Graphs");
         getContentPane().add(AddBaggage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 330, -1, -1));
 
-        AddBaggage2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        AddBaggage2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         AddBaggage2.setText("Status");
         getContentPane().add(AddBaggage2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 410, -1, -1));
 
