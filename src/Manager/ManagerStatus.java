@@ -38,7 +38,8 @@ public class ManagerStatus extends javax.swing.JFrame {
         AddBaggage2 = new javax.swing.JLabel();
         AddBaggage3 = new javax.swing.JLabel();
         ID = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        achtergrond = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -74,10 +75,11 @@ public class ManagerStatus extends javax.swing.JFrame {
 
         ID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         ID.setText("Employee ID:");
-        getContentPane().add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 90, 130, 50));
+        getContentPane().add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 80, 130, 50));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 150, 900, 460));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/layoutCorendonFinalVeranderd.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 1300, 740));
+        achtergrond.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/layoutCorendonFinalVeranderd.png"))); // NOI18N
+        getContentPane().add(achtergrond, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1300, 650));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -126,6 +128,7 @@ public class ManagerStatus extends javax.swing.JFrame {
     private javax.swing.JLabel ID;
     private javax.swing.JLabel Name;
     private javax.swing.JLabel Search;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel achtergrond;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

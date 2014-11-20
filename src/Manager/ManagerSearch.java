@@ -91,7 +91,7 @@ public class ManagerSearch extends javax.swing.JFrame {
                 jTextField1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 180, 690, 30));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 180, 690, 30));
 
         ID1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         ID1.setText("Employee ID:");
@@ -117,7 +117,6 @@ public class ManagerSearch extends javax.swing.JFrame {
         jCheckBox3.setText("Status");
         getContentPane().add(jCheckBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 210, -1, -1));
 
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Jasper\\Dropbox\\FYS\\Project FYS\\FYS Projaect\\search.png")); // NOI18N
         jButton1.setText("Search");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,10 +124,10 @@ public class ManagerSearch extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 180, -1, 30));
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 270, 710, 280));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, 710, 280));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/layoutCorendonFinalVeranderd.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, -50, 1300, 740));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1300, 650));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
