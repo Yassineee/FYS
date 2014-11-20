@@ -36,6 +36,14 @@ public class Employee extends javax.swing.JFrame {
         Logout = new javax.swing.JButton();
         employeeHome = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        employeeSearch = new javax.swing.JPanel();
+        SearchTitle = new javax.swing.JLabel();
+        employeeAddBaggage = new javax.swing.JPanel();
+        addBaggageTitle = new javax.swing.JLabel();
+        employeeSubmitRequest = new javax.swing.JPanel();
+        submitRequestTitle = new javax.swing.JLabel();
+        employeeHelp = new javax.swing.JPanel();
+        helpTitle = new javax.swing.JLabel();
         menu = new javax.swing.JPanel();
         helpButtom = new javax.swing.JToggleButton();
         homeButtom = new javax.swing.JToggleButton();
@@ -78,6 +86,42 @@ public class Employee extends javax.swing.JFrame {
         employeeHome.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
 
         getContentPane().add(employeeHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(285, 150, 910, 470));
+
+        employeeSearch.setBackground(new java.awt.Color(153, 51, 51));
+        employeeSearch.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        SearchTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        SearchTitle.setText("Search");
+        employeeSearch.add(SearchTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
+
+        getContentPane().add(employeeSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(285, 150, 910, 470));
+
+        employeeAddBaggage.setBackground(new java.awt.Color(153, 51, 51));
+        employeeAddBaggage.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        addBaggageTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        addBaggageTitle.setText("Add Baggage");
+        employeeAddBaggage.add(addBaggageTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
+
+        getContentPane().add(employeeAddBaggage, new org.netbeans.lib.awtextra.AbsoluteConstraints(285, 150, 910, 470));
+
+        employeeSubmitRequest.setBackground(new java.awt.Color(153, 51, 51));
+        employeeSubmitRequest.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        submitRequestTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        submitRequestTitle.setText("Submit Request");
+        employeeSubmitRequest.add(submitRequestTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
+
+        getContentPane().add(employeeSubmitRequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(285, 150, 910, 470));
+
+        employeeHelp.setBackground(new java.awt.Color(153, 51, 51));
+        employeeHelp.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        helpTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        helpTitle.setText("Help");
+        employeeHelp.add(helpTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
+
+        getContentPane().add(employeeHelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(285, 150, 920, 470));
 
         menu.setBackground(new java.awt.Color(255, 255, 255));
         menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -209,14 +253,22 @@ public class Employee extends javax.swing.JFrame {
     private javax.swing.JLabel ID;
     private javax.swing.JButton Logout;
     private javax.swing.JLabel Name;
+    private javax.swing.JLabel SearchTitle;
     private javax.swing.JToggleButton addBaggageButtom;
+    private javax.swing.JLabel addBaggageTitle;
+    private javax.swing.JPanel employeeAddBaggage;
+    private javax.swing.JPanel employeeHelp;
     private javax.swing.JPanel employeeHome;
+    private javax.swing.JPanel employeeSearch;
+    private javax.swing.JPanel employeeSubmitRequest;
     private javax.swing.JToggleButton helpButtom;
+    private javax.swing.JLabel helpTitle;
     private javax.swing.JToggleButton homeButtom;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel menu;
     private javax.swing.JToggleButton searchbuttom;
     private javax.swing.JToggleButton submitRequestButtom;
+    private javax.swing.JLabel submitRequestTitle;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 

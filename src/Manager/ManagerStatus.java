@@ -38,6 +38,13 @@ public class ManagerStatus extends javax.swing.JFrame {
         AddBaggage2 = new javax.swing.JLabel();
         AddBaggage3 = new javax.swing.JLabel();
         ID = new javax.swing.JLabel();
+        HomeLabel = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        SearchLabel = new javax.swing.JPanel();
+        GraphsLabel = new javax.swing.JPanel();
+        Status = new javax.swing.JPanel();
+        LogfilesLabel = new javax.swing.JPanel();
+        HelpLabel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -64,7 +71,7 @@ public class ManagerStatus extends javax.swing.JFrame {
         AddBaggage1.setText("Graphs");
         getContentPane().add(AddBaggage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 330, -1, -1));
 
-        AddBaggage2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        AddBaggage2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         AddBaggage2.setText("Status");
         getContentPane().add(AddBaggage2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 410, -1, -1));
 
@@ -75,6 +82,37 @@ public class ManagerStatus extends javax.swing.JFrame {
         ID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         ID.setText("Employee ID:");
         getContentPane().add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 90, 130, 50));
+
+        HomeLabel.setBackground(new java.awt.Color(153, 51, 51));
+        HomeLabel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setBackground(new java.awt.Color(153, 51, 51));
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        jLabel2.setText("Welkom");
+        jLabel2.setToolTipText("");
+        HomeLabel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 20, 290, 80));
+
+        getContentPane().add(HomeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 890, 440));
+
+        SearchLabel.setBackground(new java.awt.Color(153, 51, 51));
+        SearchLabel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(SearchLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 890, 440));
+
+        GraphsLabel.setBackground(new java.awt.Color(153, 51, 51));
+        GraphsLabel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(GraphsLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 890, 440));
+
+        Status.setBackground(new java.awt.Color(153, 51, 51));
+        Status.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(Status, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 890, 440));
+
+        LogfilesLabel.setBackground(new java.awt.Color(153, 51, 51));
+        LogfilesLabel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(LogfilesLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 890, 440));
+
+        HelpLabel.setBackground(new java.awt.Color(153, 51, 51));
+        HelpLabel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(HelpLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 890, 440));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/layoutCorendonFinalVeranderd.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 1300, 740));
@@ -122,10 +160,17 @@ public class ManagerStatus extends javax.swing.JFrame {
     private javax.swing.JLabel AddBaggage1;
     private javax.swing.JLabel AddBaggage2;
     private javax.swing.JLabel AddBaggage3;
+    private javax.swing.JPanel GraphsLabel;
+    private javax.swing.JPanel HelpLabel;
     private javax.swing.JLabel Home;
+    private javax.swing.JPanel HomeLabel;
     private javax.swing.JLabel ID;
+    private javax.swing.JPanel LogfilesLabel;
     private javax.swing.JLabel Name;
     private javax.swing.JLabel Search;
+    private javax.swing.JPanel SearchLabel;
+    private javax.swing.JPanel Status;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

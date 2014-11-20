@@ -14,12 +14,12 @@ import Manager.Managerhome;
  *
  * @author Yassinee
  */
-public class ManagerSearch extends javax.swing.JFrame {
+public class Manager extends javax.swing.JFrame {
 
     /**
      * Creates new form Managerhome
      */
-    public ManagerSearch() {
+    public Manager() {
         initComponents();
     }
 
@@ -117,7 +117,6 @@ public class ManagerSearch extends javax.swing.JFrame {
         jCheckBox3.setText("Status");
         getContentPane().add(jCheckBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 210, -1, -1));
 
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Jasper\\Dropbox\\FYS\\Project FYS\\FYS Projaect\\search.png")); // NOI18N
         jButton1.setText("Search");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
