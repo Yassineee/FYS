@@ -51,6 +51,11 @@ public class Managerhome extends javax.swing.JFrame {
 
         Search.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         Search.setText("Search");
+        Search.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                SearchKeyPressed(evt);
+            }
+        });
         getContentPane().add(Search, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 90, 40));
 
         AddBaggage.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -78,6 +83,10 @@ public class Managerhome extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void SearchKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_SearchKeyPressed
+            
+    }//GEN-LAST:event_SearchKeyPressed
 
     /**
      * @param args the command line arguments
