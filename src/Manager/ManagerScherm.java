@@ -1,7 +1,7 @@
 package Manager;
 
 
-import Manager.Managerhome;
+import Manager.NIKS5;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -12,12 +12,12 @@ import Manager.Managerhome;
  *
  * @author Yassinee
  */
-public class ManagerStatus extends javax.swing.JFrame {
+public class ManagerScherm extends javax.swing.JFrame {
 
     /**
      * Creates new form Managerhome
      */
-    public ManagerStatus() {
+    public ManagerScherm() {
         initComponents();
     }
 
@@ -31,13 +31,6 @@ public class ManagerStatus extends javax.swing.JFrame {
     private void initComponents() {
 
         Name = new javax.swing.JLabel();
-        Home = new javax.swing.JLabel();
-        Search = new javax.swing.JLabel();
-        AddBaggage = new javax.swing.JLabel();
-        AddBaggage1 = new javax.swing.JLabel();
-        AddBaggage2 = new javax.swing.JLabel();
-        AddBaggage3 = new javax.swing.JLabel();
-        ID = new javax.swing.JLabel();
         HomeLabel = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         SearchLabel = new javax.swing.JPanel();
@@ -45,6 +38,12 @@ public class ManagerStatus extends javax.swing.JFrame {
         Status = new javax.swing.JPanel();
         LogfilesLabel = new javax.swing.JPanel();
         HelpLabel = new javax.swing.JPanel();
+        menu = new javax.swing.JPanel();
+        helpButtom = new javax.swing.JToggleButton();
+        homeButtom = new javax.swing.JToggleButton();
+        searchbuttom = new javax.swing.JToggleButton();
+        addBaggageButtom = new javax.swing.JToggleButton();
+        submitRequestButtom = new javax.swing.JToggleButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -54,34 +53,6 @@ public class ManagerStatus extends javax.swing.JFrame {
         Name.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Name.setText("Logged in as:");
         getContentPane().add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 140, 50));
-
-        Home.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        Home.setText("Home");
-        getContentPane().add(Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 70, 30));
-
-        Search.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        Search.setText("Search");
-        getContentPane().add(Search, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 90, 40));
-
-        AddBaggage.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        AddBaggage.setText("Help");
-        getContentPane().add(AddBaggage, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 550, -1, -1));
-
-        AddBaggage1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        AddBaggage1.setText("Graphs");
-        getContentPane().add(AddBaggage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 330, -1, -1));
-
-        AddBaggage2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        AddBaggage2.setText("Status");
-        getContentPane().add(AddBaggage2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 410, -1, -1));
-
-        AddBaggage3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        AddBaggage3.setText("Log files");
-        getContentPane().add(AddBaggage3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 480, -1, -1));
-
-        ID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        ID.setText("Employee ID:");
-        getContentPane().add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 90, 130, 50));
 
         HomeLabel.setBackground(new java.awt.Color(153, 51, 51));
         HomeLabel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -114,11 +85,85 @@ public class ManagerStatus extends javax.swing.JFrame {
         HelpLabel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(HelpLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 890, 440));
 
+        menu.setBackground(new java.awt.Color(255, 255, 255));
+        menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        helpButtom.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        helpButtom.setText("Help");
+        helpButtom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                helpButtomActionPerformed(evt);
+            }
+        });
+        menu.add(helpButtom, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 110, 40));
+
+        homeButtom.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        homeButtom.setText("Home");
+        homeButtom.setToolTipText("Hiermee kom je op de home-pagina");
+        homeButtom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                homeButtomActionPerformed(evt);
+            }
+        });
+        menu.add(homeButtom, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 110, 40));
+
+        searchbuttom.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        searchbuttom.setText("Search");
+        searchbuttom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchbuttomActionPerformed(evt);
+            }
+        });
+        menu.add(searchbuttom, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 110, 40));
+
+        addBaggageButtom.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        addBaggageButtom.setText("Add baggage");
+        addBaggageButtom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addBaggageButtomActionPerformed(evt);
+            }
+        });
+        menu.add(addBaggageButtom, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 110, 40));
+
+        submitRequestButtom.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        submitRequestButtom.setText("Submit Request");
+        submitRequestButtom.setToolTipText("DIT IS EEN HOME KNOPP!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        submitRequestButtom.setAlignmentX(1.0F);
+        submitRequestButtom.setAlignmentY(0.0F);
+        submitRequestButtom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitRequestButtomActionPerformed(evt);
+            }
+        });
+        menu.add(submitRequestButtom, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 110, 40));
+
+        getContentPane().add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 150, 430));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/layoutCorendonFinalVeranderd.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 1300, 740));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void helpButtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helpButtomActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_helpButtomActionPerformed
+
+    private void homeButtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeButtomActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_homeButtomActionPerformed
+
+    private void searchbuttomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchbuttomActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_searchbuttomActionPerformed
+
+    private void addBaggageButtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBaggageButtomActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addBaggageButtomActionPerformed
+
+    private void submitRequestButtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitRequestButtomActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_submitRequestButtomActionPerformed
 
     /**
      * @param args the command line arguments
@@ -137,40 +182,40 @@ public class ManagerStatus extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Managerhome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NIKS5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Managerhome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NIKS5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Managerhome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NIKS5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Managerhome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NIKS5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Managerhome().setVisible(true);
+                new NIKS5().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel AddBaggage;
-    private javax.swing.JLabel AddBaggage1;
-    private javax.swing.JLabel AddBaggage2;
-    private javax.swing.JLabel AddBaggage3;
     private javax.swing.JPanel GraphsLabel;
     private javax.swing.JPanel HelpLabel;
-    private javax.swing.JLabel Home;
     private javax.swing.JPanel HomeLabel;
-    private javax.swing.JLabel ID;
     private javax.swing.JPanel LogfilesLabel;
     private javax.swing.JLabel Name;
-    private javax.swing.JLabel Search;
     private javax.swing.JPanel SearchLabel;
     private javax.swing.JPanel Status;
+    private javax.swing.JToggleButton addBaggageButtom;
+    private javax.swing.JToggleButton helpButtom;
+    private javax.swing.JToggleButton homeButtom;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel menu;
+    private javax.swing.JToggleButton searchbuttom;
+    private javax.swing.JToggleButton submitRequestButtom;
     // End of variables declaration//GEN-END:variables
 }

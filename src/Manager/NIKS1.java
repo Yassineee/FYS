@@ -9,12 +9,12 @@ package Manager;
  *
  * @author Yassinee
  */
-public class Managersearchh extends javax.swing.JPanel {
+public class NIKS1 extends javax.swing.JPanel {
 
     /**
      * Creates new form Managersearchh
      */
-    public Managersearchh() {
+    public NIKS1() {
         initComponents();
     }
 

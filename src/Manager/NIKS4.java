@@ -1,5 +1,8 @@
 package Manager;
 
+
+import Manager.NIKS5;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,12 +12,12 @@ package Manager;
  *
  * @author Yassinee
  */
-public class Managerhome extends javax.swing.JFrame {
+public class NIKS4 extends javax.swing.JFrame {
 
     /**
      * Creates new form Managerhome
      */
-    public Managerhome() {
+    public NIKS4() {
         initComponents();
     }
 
@@ -35,6 +38,7 @@ public class Managerhome extends javax.swing.JFrame {
         AddBaggage2 = new javax.swing.JLabel();
         AddBaggage3 = new javax.swing.JLabel();
         ID = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -45,24 +49,19 @@ public class Managerhome extends javax.swing.JFrame {
         Name.setText("Logged in as:");
         getContentPane().add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 140, 50));
 
-        Home.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        Home.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         Home.setText("Home");
         getContentPane().add(Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 70, 30));
 
         Search.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         Search.setText("Search");
-        Search.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                SearchKeyPressed(evt);
-            }
-        });
         getContentPane().add(Search, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 90, 40));
 
         AddBaggage.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         AddBaggage.setText("Help");
         getContentPane().add(AddBaggage, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 550, -1, -1));
 
-        AddBaggage1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        AddBaggage1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         AddBaggage1.setText("Graphs");
         getContentPane().add(AddBaggage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 330, -1, -1));
 
@@ -77,16 +76,13 @@ public class Managerhome extends javax.swing.JFrame {
         ID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         ID.setText("Employee ID:");
         getContentPane().add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 90, 130, 50));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, 760, 250));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/layoutCorendonFinalVeranderd.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 1300, 740));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void SearchKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_SearchKeyPressed
-            
-    }//GEN-LAST:event_SearchKeyPressed
 
     /**
      * @param args the command line arguments
@@ -105,20 +101,21 @@ public class Managerhome extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Managerhome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NIKS5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Managerhome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NIKS5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Managerhome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NIKS5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Managerhome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NIKS5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Managerhome().setVisible(true);
+                new NIKS5().setVisible(true);
             }
         });
     }
@@ -133,5 +130,6 @@ public class Managerhome extends javax.swing.JFrame {
     private javax.swing.JLabel Name;
     private javax.swing.JLabel Search;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
