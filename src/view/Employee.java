@@ -1,7 +1,8 @@
-package Manager;
+package view;
 
 
-import Manager.NIKS5;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -10,14 +11,15 @@ import Manager.NIKS5;
  */
 /**
  *
- * @author Yassinee
+ * @author EdoTyran
  */
-public class ManagerScherm extends javax.swing.JFrame {
-
+public class Employee extends javax.swing.JFrame {
+    
+    int xMouse, yMouse;
     /**
-     * Creates new form Managerhome
+     * Creates new form Employee
      */
-    public ManagerScherm() {
+    public Employee() {
         initComponents();
     }
 
@@ -29,61 +31,99 @@ public class ManagerScherm extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
         Name = new javax.swing.JLabel();
-        HomeLabel = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        SearchLabel = new javax.swing.JPanel();
-        GraphsLabel = new javax.swing.JPanel();
-        Status = new javax.swing.JPanel();
-        LogfilesLabel = new javax.swing.JPanel();
-        HelpLabel = new javax.swing.JPanel();
+        ID = new javax.swing.JLabel();
+        Logout = new javax.swing.JButton();
+        employeeHome = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        employeeSearch = new javax.swing.JPanel();
+        SearchTitle = new javax.swing.JLabel();
+        employeeAddBaggage = new javax.swing.JPanel();
+        addBaggageTitle = new javax.swing.JLabel();
+        employeeSubmitRequest = new javax.swing.JPanel();
+        submitRequestTitle = new javax.swing.JLabel();
+        employeeHelp = new javax.swing.JPanel();
+        helpTitle = new javax.swing.JLabel();
         menu = new javax.swing.JPanel();
         helpButtom = new javax.swing.JToggleButton();
         homeButtom = new javax.swing.JToggleButton();
         searchbuttom = new javax.swing.JToggleButton();
         addBaggageButtom = new javax.swing.JToggleButton();
         submitRequestButtom = new javax.swing.JToggleButton();
-        jLabel1 = new javax.swing.JLabel();
+        Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Lost Baggage");
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Name.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Name.setText("Logged in as:");
-        getContentPane().add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 140, 50));
+        getContentPane().add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 150, 40));
 
-        HomeLabel.setBackground(new java.awt.Color(153, 51, 51));
-        HomeLabel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        ID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        ID.setText("Employee ID:");
+        getContentPane().add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 90, 130, 40));
 
-        jLabel2.setBackground(new java.awt.Color(153, 51, 51));
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        jLabel2.setText("Welkom");
-        jLabel2.setToolTipText("");
-        HomeLabel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 20, 290, 80));
+        Logout.setBackground(new java.awt.Color(151, 51, 51));
+        Logout.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Logout.setText("Logout");
+        Logout.setToolTipText("blablabla");
+        Logout.setBorder(null);
+        Logout.setBorderPainted(false);
+        Logout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LogoutActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 90, 70, 30));
 
-        getContentPane().add(HomeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 890, 440));
+        employeeHome.setBackground(new java.awt.Color(153, 51, 51));
+        employeeHome.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        SearchLabel.setBackground(new java.awt.Color(153, 51, 51));
-        SearchLabel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(SearchLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 890, 440));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setText("Home");
+        employeeHome.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
 
-        GraphsLabel.setBackground(new java.awt.Color(153, 51, 51));
-        GraphsLabel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(GraphsLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 890, 440));
+        getContentPane().add(employeeHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(285, 150, 910, 470));
 
-        Status.setBackground(new java.awt.Color(153, 51, 51));
-        Status.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(Status, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 890, 440));
+        employeeSearch.setBackground(new java.awt.Color(153, 51, 51));
+        employeeSearch.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        LogfilesLabel.setBackground(new java.awt.Color(153, 51, 51));
-        LogfilesLabel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(LogfilesLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 890, 440));
+        SearchTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        SearchTitle.setText("Search");
+        employeeSearch.add(SearchTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
 
-        HelpLabel.setBackground(new java.awt.Color(153, 51, 51));
-        HelpLabel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(HelpLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 890, 440));
+        getContentPane().add(employeeSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(285, 150, 910, 470));
+
+        employeeAddBaggage.setBackground(new java.awt.Color(153, 51, 51));
+        employeeAddBaggage.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        addBaggageTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        addBaggageTitle.setText("Add Baggage");
+        employeeAddBaggage.add(addBaggageTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
+
+        getContentPane().add(employeeAddBaggage, new org.netbeans.lib.awtextra.AbsoluteConstraints(285, 150, 910, 470));
+
+        employeeSubmitRequest.setBackground(new java.awt.Color(153, 51, 51));
+        employeeSubmitRequest.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        submitRequestTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        submitRequestTitle.setText("Submit Request");
+        employeeSubmitRequest.add(submitRequestTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
+
+        getContentPane().add(employeeSubmitRequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(285, 150, 910, 470));
+
+        employeeHelp.setBackground(new java.awt.Color(153, 51, 51));
+        employeeHelp.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        helpTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        helpTitle.setText("Help");
+        employeeHelp.add(helpTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
+
+        getContentPane().add(employeeHelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(285, 150, 920, 470));
 
         menu.setBackground(new java.awt.Color(255, 255, 255));
         menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -139,11 +179,21 @@ public class ManagerScherm extends javax.swing.JFrame {
 
         getContentPane().add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 150, 430));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/layoutCorendonFinalVeranderd.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 1300, 740));
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/layoutCorendonFinalVeranderd.png"))); // NOI18N
+
+        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, Background, org.jdesktop.beansbinding.ELProperty.create("${background}"), Background, org.jdesktop.beansbinding.BeanProperty.create("background"));
+        bindingGroup.addBinding(binding);
+
+        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 650));
+
+        bindingGroup.bind();
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void LogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoutActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LogoutActionPerformed
 
     private void helpButtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helpButtomActionPerformed
         // TODO add your handling code here:
@@ -182,40 +232,49 @@ public class ManagerScherm extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NIKS5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Employee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NIKS5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Employee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NIKS5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Employee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NIKS5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Employee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new NIKS5().setVisible(true);
+                new Employee().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel GraphsLabel;
-    private javax.swing.JPanel HelpLabel;
-    private javax.swing.JPanel HomeLabel;
-    private javax.swing.JPanel LogfilesLabel;
+    private javax.swing.JLabel Background;
+    private javax.swing.JLabel ID;
+    private javax.swing.JButton Logout;
     private javax.swing.JLabel Name;
-    private javax.swing.JPanel SearchLabel;
-    private javax.swing.JPanel Status;
+    private javax.swing.JLabel SearchTitle;
     private javax.swing.JToggleButton addBaggageButtom;
+    private javax.swing.JLabel addBaggageTitle;
+    private javax.swing.JPanel employeeAddBaggage;
+    private javax.swing.JPanel employeeHelp;
+    private javax.swing.JPanel employeeHome;
+    private javax.swing.JPanel employeeSearch;
+    private javax.swing.JPanel employeeSubmitRequest;
     private javax.swing.JToggleButton helpButtom;
+    private javax.swing.JLabel helpTitle;
     private javax.swing.JToggleButton homeButtom;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel menu;
     private javax.swing.JToggleButton searchbuttom;
     private javax.swing.JToggleButton submitRequestButtom;
+    private javax.swing.JLabel submitRequestTitle;
+    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
+
+Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+double width = screenSize.getWidth();
+double height = screenSize.getHeight();
 }
