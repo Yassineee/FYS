@@ -34,11 +34,14 @@ public class Employee extends javax.swing.JFrame {
         Name = new javax.swing.JLabel();
         ID = new javax.swing.JLabel();
         Logout = new javax.swing.JButton();
-        Home = new javax.swing.JLabel();
-        Search = new javax.swing.JLabel();
-        AddBaggage = new javax.swing.JLabel();
+        employeeHome = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        menu = new javax.swing.JPanel();
+        helpButtom = new javax.swing.JToggleButton();
+        homeButtom = new javax.swing.JToggleButton();
+        searchbuttom = new javax.swing.JToggleButton();
+        addBaggageButtom = new javax.swing.JToggleButton();
+        submitRequestButtom = new javax.swing.JToggleButton();
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -48,11 +51,11 @@ public class Employee extends javax.swing.JFrame {
 
         Name.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Name.setText("Logged in as:");
-        getContentPane().add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 140, 50));
+        getContentPane().add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 150, 40));
 
         ID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         ID.setText("Employee ID:");
-        getContentPane().add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 140, 130, 50));
+        getContentPane().add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 90, 130, 40));
 
         Logout.setBackground(new java.awt.Color(151, 51, 51));
         Logout.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -65,34 +68,77 @@ public class Employee extends javax.swing.JFrame {
                 LogoutActionPerformed(evt);
             }
         });
-        getContentPane().add(Logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(1590, 150, 80, 30));
+        getContentPane().add(Logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 90, 70, 30));
 
-        Home.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        Home.setText("Home");
-        getContentPane().add(Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 70, 30));
+        employeeHome.setBackground(new java.awt.Color(153, 51, 51));
+        employeeHome.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Search.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        Search.setText("Search");
-        getContentPane().add(Search, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 90, 40));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setText("Home");
+        employeeHome.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
 
-        AddBaggage.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        AddBaggage.setText("Add baggage");
-        getContentPane().add(AddBaggage, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, -1, -1));
+        getContentPane().add(employeeHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(285, 150, 910, 470));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel1.setText("Submit request");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 570, -1, -1));
+        menu.setBackground(new java.awt.Color(255, 255, 255));
+        menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel2.setText("Help");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 660, -1, -1));
+        helpButtom.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        helpButtom.setText("Help");
+        helpButtom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                helpButtomActionPerformed(evt);
+            }
+        });
+        menu.add(helpButtom, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 110, 40));
+
+        homeButtom.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        homeButtom.setText("Home");
+        homeButtom.setToolTipText("Hiermee kom je op de home-pagina");
+        homeButtom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                homeButtomActionPerformed(evt);
+            }
+        });
+        menu.add(homeButtom, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 110, 40));
+
+        searchbuttom.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        searchbuttom.setText("Search");
+        searchbuttom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchbuttomActionPerformed(evt);
+            }
+        });
+        menu.add(searchbuttom, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 110, 40));
+
+        addBaggageButtom.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        addBaggageButtom.setText("Add baggage");
+        addBaggageButtom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addBaggageButtomActionPerformed(evt);
+            }
+        });
+        menu.add(addBaggageButtom, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 110, 40));
+
+        submitRequestButtom.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        submitRequestButtom.setText("Submit Request");
+        submitRequestButtom.setToolTipText("DIT IS EEN HOME KNOPP!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        submitRequestButtom.setAlignmentX(1.0F);
+        submitRequestButtom.setAlignmentY(0.0F);
+        submitRequestButtom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitRequestButtomActionPerformed(evt);
+            }
+        });
+        menu.add(submitRequestButtom, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 110, 40));
+
+        getContentPane().add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 150, 430));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/layoutCorendonFinalVeranderd.png"))); // NOI18N
 
         org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, Background, org.jdesktop.beansbinding.ELProperty.create("${background}"), Background, org.jdesktop.beansbinding.BeanProperty.create("background"));
         bindingGroup.addBinding(binding);
 
-        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, 850));
+        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 650));
 
         bindingGroup.bind();
 
@@ -102,6 +148,26 @@ public class Employee extends javax.swing.JFrame {
     private void LogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoutActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_LogoutActionPerformed
+
+    private void helpButtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helpButtomActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_helpButtomActionPerformed
+
+    private void homeButtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeButtomActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_homeButtomActionPerformed
+
+    private void searchbuttomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchbuttomActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_searchbuttomActionPerformed
+
+    private void addBaggageButtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBaggageButtomActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addBaggageButtomActionPerformed
+
+    private void submitRequestButtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitRequestButtomActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_submitRequestButtomActionPerformed
 
     /**
      * @param args the command line arguments
@@ -139,15 +205,18 @@ public class Employee extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel AddBaggage;
     private javax.swing.JLabel Background;
-    private javax.swing.JLabel Home;
     private javax.swing.JLabel ID;
     private javax.swing.JButton Logout;
     private javax.swing.JLabel Name;
-    private javax.swing.JLabel Search;
+    private javax.swing.JToggleButton addBaggageButtom;
+    private javax.swing.JPanel employeeHome;
+    private javax.swing.JToggleButton helpButtom;
+    private javax.swing.JToggleButton homeButtom;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel menu;
+    private javax.swing.JToggleButton searchbuttom;
+    private javax.swing.JToggleButton submitRequestButtom;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 
