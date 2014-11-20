@@ -63,27 +63,27 @@ public class ManagerScherm extends javax.swing.JFrame {
         jLabel2.setToolTipText("");
         HomeLabel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 20, 290, 80));
 
-        getContentPane().add(HomeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 890, 440));
+        getContentPane().add(HomeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 910, 460));
 
         SearchLabel.setBackground(new java.awt.Color(153, 51, 51));
         SearchLabel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(SearchLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 890, 440));
+        getContentPane().add(SearchLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 910, 460));
 
         GraphsLabel.setBackground(new java.awt.Color(153, 51, 51));
         GraphsLabel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(GraphsLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 890, 440));
+        getContentPane().add(GraphsLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 910, 460));
 
         Status.setBackground(new java.awt.Color(153, 51, 51));
         Status.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(Status, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 890, 440));
+        getContentPane().add(Status, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 910, 460));
 
         LogfilesLabel.setBackground(new java.awt.Color(153, 51, 51));
         LogfilesLabel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(LogfilesLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 890, 440));
+        getContentPane().add(LogfilesLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 910, 460));
 
         HelpLabel.setBackground(new java.awt.Color(153, 51, 51));
         HelpLabel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(HelpLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 890, 440));
+        getContentPane().add(HelpLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 910, 460));
 
         menu.setBackground(new java.awt.Color(255, 255, 255));
         menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -140,7 +140,7 @@ public class ManagerScherm extends javax.swing.JFrame {
         getContentPane().add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 150, 430));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/layoutCorendonFinalVeranderd.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 1300, 740));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1300, 650));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
