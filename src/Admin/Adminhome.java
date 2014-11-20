@@ -43,7 +43,7 @@ public class AdminHome extends javax.swing.JFrame {
         Home.setText("help");
         getContentPane().add(Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 550, 50, 30));
 
-        Home1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        Home1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         Home1.setText("Home");
         getContentPane().add(Home1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 70, 30));
 
