@@ -35,6 +35,9 @@ public class Managerhome extends javax.swing.JFrame {
         AddBaggage2 = new javax.swing.JLabel();
         AddBaggage3 = new javax.swing.JLabel();
         ID = new javax.swing.JLabel();
+        homePanel = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -78,6 +81,24 @@ public class Managerhome extends javax.swing.JFrame {
         ID.setText("Employee ID:");
         getContentPane().add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 90, 130, 50));
 
+        homePanel.setBackground(new java.awt.Color(152, 51, 51));
+        homePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setBackground(new java.awt.Color(153, 51, 51));
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        jLabel2.setText("Welkom Manager,");
+        homePanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 50, 400, 90));
+
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        homePanel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 210, -1, -1));
+
+        getContentPane().add(homePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, 910, 460));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/layoutCorendonFinalVeranderd.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 1300, 740));
 
@@ -87,6 +108,10 @@ public class Managerhome extends javax.swing.JFrame {
     private void SearchKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_SearchKeyPressed
             
     }//GEN-LAST:event_SearchKeyPressed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    Manager.ManagerGraphs.getFrames();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -132,6 +157,9 @@ public class Managerhome extends javax.swing.JFrame {
     private javax.swing.JLabel ID;
     private javax.swing.JLabel Name;
     private javax.swing.JLabel Search;
+    private javax.swing.JPanel homePanel;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

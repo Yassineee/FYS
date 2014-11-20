@@ -38,6 +38,7 @@ public class ManagerHelp extends javax.swing.JFrame {
         AddBaggage2 = new javax.swing.JLabel();
         AddBaggage3 = new javax.swing.JLabel();
         ID = new javax.swing.JLabel();
+        Help = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -75,6 +76,9 @@ public class ManagerHelp extends javax.swing.JFrame {
         ID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         ID.setText("Employee ID:");
         getContentPane().add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 90, 130, 50));
+
+        Help.setBackground(new java.awt.Color(153, 51, 51));
+        getContentPane().add(Help, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, 900, 450));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/layoutCorendonFinalVeranderd.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 1300, 740));
@@ -122,6 +126,7 @@ public class ManagerHelp extends javax.swing.JFrame {
     private javax.swing.JLabel AddBaggage1;
     private javax.swing.JLabel AddBaggage2;
     private javax.swing.JLabel AddBaggage3;
+    private javax.swing.JPanel Help;
     private javax.swing.JLabel Home;
     private javax.swing.JLabel ID;
     private javax.swing.JLabel Name;
