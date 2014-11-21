@@ -156,9 +156,7 @@ public class Admin extends javax.swing.JFrame {
         ID.setText("Employee ID:");
         getContentPane().add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 90, 130, 40));
 
-        jPanel1.setBackground(new java.awt.Color(153, 51, 51));
-        jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        jPanel1.setForeground(new java.awt.Color(153, 51, 51));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 6));
         jPanel1.setLayout(new java.awt.BorderLayout());
 
         AdminHome.setBackground(new java.awt.Color(153, 51, 51));
@@ -176,6 +174,8 @@ public class Admin extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("Account type:");
         AdminHome.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, 110, 30));
+
+        jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\Yassinee\\Downloads\\CorendonLogo.png")); // NOI18N
         AdminHome.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, 200, 80));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -312,7 +312,7 @@ public class Admin extends javax.swing.JFrame {
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/00000001.JPG"))); // NOI18N
         background.setToolTipText("");
         background.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        AdminEdit.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 450));
+        AdminEdit.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 450));
 
         AdminHome.add(AdminEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -412,7 +412,7 @@ public class Admin extends javax.swing.JFrame {
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/00000001.JPG"))); // NOI18N
         jLabel9.setToolTipText("");
         jLabel9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        AdminCreate.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 450));
+        AdminCreate.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 450));
 
         AdminHome.add(AdminCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -512,7 +512,7 @@ public class Admin extends javax.swing.JFrame {
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/00000001.JPG"))); // NOI18N
         jLabel10.setToolTipText("");
         jLabel10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        AdminDelete.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 450));
+        AdminDelete.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 450));
 
         AdminHome.add(AdminDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -527,7 +527,7 @@ public class Admin extends javax.swing.JFrame {
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/00000001.JPG"))); // NOI18N
         jLabel7.setToolTipText("");
         jLabel7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        AdminHelp.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 450));
+        AdminHelp.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 450));
 
         AdminHome.add(AdminHelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 

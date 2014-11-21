@@ -42,9 +42,71 @@ public class Employee extends javax.swing.JFrame {
         Name = new javax.swing.JLabel();
         ID = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        employeeHome = new javax.swing.JPanel();
+        EmployeeHome = new javax.swing.JPanel();
+        welcomeText = new javax.swing.JLabel();
+        naamText = new javax.swing.JLabel();
+        accountTypeNaam = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        IDText = new javax.swing.JLabel();
+        nameBar = new javax.swing.JTextField();
+        accountType = new javax.swing.JTextField();
+        idBar = new javax.swing.JTextField();
+        Backgroundlabel = new javax.swing.JLabel();
+        EmployeeSearch = new javax.swing.JPanel();
+        jTextField4 = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        EmployeeSumbitBaggage = new javax.swing.JPanel();
+        jTextField10 = new javax.swing.JTextField();
+        jTextField11 = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
+        jTextField12 = new javax.swing.JTextField();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jTextField13 = new javax.swing.JTextField();
+        jTextField14 = new javax.swing.JTextField();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
+        jButton2 = new javax.swing.JButton();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        EmpolyeeAddBaggage = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField7 = new javax.swing.JTextField();
+        jTextField8 = new javax.swing.JTextField();
+        jTextField9 = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jButton1 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        EmployeeHelp = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jList3 = new javax.swing.JList();
+        jCheckBox6 = new javax.swing.JCheckBox();
+        jCheckBox7 = new javax.swing.JCheckBox();
+        jCheckBox8 = new javax.swing.JCheckBox();
+        jTextField6 = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         menu = new javax.swing.JPanel();
         homeButton = new javax.swing.JLabel();
         searchButton = new javax.swing.JLabel();
@@ -53,14 +115,6 @@ public class Employee extends javax.swing.JFrame {
         helpButton = new javax.swing.JLabel();
         logoutKnop = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
-        employeeAddBaggage = new javax.swing.JPanel();
-        addBaggageTitle = new javax.swing.JLabel();
-        employeeSearch = new javax.swing.JPanel();
-        SearchTitle = new javax.swing.JLabel();
-        employeeSubmitRequest = new javax.swing.JPanel();
-        submitRequestTitle = new javax.swing.JLabel();
-        employeeHelp = new javax.swing.JPanel();
-        helpTitle = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Lost Baggage");
@@ -75,22 +129,314 @@ public class Employee extends javax.swing.JFrame {
         ID.setText("Employee ID:");
         getContentPane().add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 90, 130, 40));
 
-        jPanel1.setBackground(new java.awt.Color(153, 51, 51));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 6));
         jPanel1.setLayout(new java.awt.BorderLayout());
 
-        employeeHome.setBackground(new java.awt.Color(153, 51, 51));
-        employeeHome.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        EmployeeHome.setBackground(new java.awt.Color(153, 51, 51));
+        EmployeeHome.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
+        EmployeeHome.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Home");
-        employeeHome.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
+        welcomeText.setFont(new java.awt.Font("Tahoma", 2, 24)); // NOI18N
+        welcomeText.setText("Welcome Manager,");
+        EmployeeHome.add(welcomeText, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 140, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/layoutCorendonFinalVeranderd_1.png"))); // NOI18N
-        employeeHome.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 990, 500));
+        naamText.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        naamText.setText("Name: ");
+        EmployeeHome.add(naamText, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 250, 50, 20));
 
-        jPanel1.add(employeeHome, java.awt.BorderLayout.CENTER);
+        accountTypeNaam.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        accountTypeNaam.setText("Account type:");
+        EmployeeHome.add(accountTypeNaam, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, 110, 30));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 140, 990, 500));
+        jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\Yassinee\\Downloads\\CorendonLogo.png")); // NOI18N
+        EmployeeHome.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, 200, 80));
+
+        IDText.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        IDText.setText("ID:");
+        EmployeeHome.add(IDText, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, 50, 20));
+
+        nameBar.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
+        nameBar.setText("Example: John");
+        nameBar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nameBarActionPerformed(evt);
+            }
+        });
+        EmployeeHome.add(nameBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 260, 100, -1));
+
+        accountType.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
+        accountType.setText("Example: Manager");
+        EmployeeHome.add(accountType, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 300, 100, -1));
+
+        idBar.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
+        idBar.setText("Example: 3");
+        EmployeeHome.add(idBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 220, 100, -1));
+
+        Backgroundlabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/00000001.JPG"))); // NOI18N
+        Backgroundlabel.setToolTipText("");
+        Backgroundlabel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        EmployeeHome.add(Backgroundlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 490));
+
+        EmployeeSearch.setBackground(new java.awt.Color(255, 255, 255));
+        EmployeeSearch.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
+        EmployeeSearch.setForeground(new java.awt.Color(255, 255, 255));
+        EmployeeSearch.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jTextField4.setText("Search");
+        EmployeeSearch.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, 540, -1));
+
+        jList1.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "search results" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(jList1);
+
+        EmployeeSearch.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 540, 220));
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/seoLogo.png"))); // NOI18N
+        EmployeeSearch.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 120, -1, -1));
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/corendon-airlines.jpg"))); // NOI18N
+        jLabel11.setText("jLabel11");
+        EmployeeSearch.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 30, 300, 70));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/00000001.JPG"))); // NOI18N
+        jLabel3.setToolTipText("");
+        jLabel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        EmployeeSearch.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 971, 482));
+
+        EmployeeHome.add(EmployeeSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 500));
+
+        EmployeeSumbitBaggage.setBackground(new java.awt.Color(153, 51, 51));
+        EmployeeSumbitBaggage.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.gray, null, java.awt.Color.lightGray));
+        EmployeeSumbitBaggage.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jTextField10.setText("jTextField1");
+        jTextField10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField10ActionPerformed(evt);
+            }
+        });
+        EmployeeSumbitBaggage.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 310, 120, -1));
+
+        jTextField11.setText("jTextField1");
+        jTextField11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField11ActionPerformed(evt);
+            }
+        });
+        EmployeeSumbitBaggage.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, 120, -1));
+
+        jLabel19.setText("Materials :");
+        EmployeeSumbitBaggage.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, -1, 20));
+
+        jLabel20.setText("Weight :");
+        EmployeeSumbitBaggage.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, -1, 20));
+
+        jLabel21.setText("Brand :");
+        EmployeeSumbitBaggage.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, -1, -1));
+
+        jTextField5.setText("jTextField1");
+        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField5ActionPerformed(evt);
+            }
+        });
+        EmployeeSumbitBaggage.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 250, 120, -1));
+
+        jTextField12.setText("jTextField1");
+        jTextField12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField12ActionPerformed(evt);
+            }
+        });
+        EmployeeSumbitBaggage.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 220, 120, -1));
+
+        jLabel22.setText("Color :");
+        EmployeeSumbitBaggage.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 220, 40, -1));
+
+        jLabel23.setText("Department :");
+        EmployeeSumbitBaggage.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, -1, -1));
+
+        jTextField13.setText("jTextField1");
+        jTextField13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField13ActionPerformed(evt);
+            }
+        });
+        EmployeeSumbitBaggage.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 190, 120, -1));
+
+        jTextField14.setText("jTextField1");
+        jTextField14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField14ActionPerformed(evt);
+            }
+        });
+        EmployeeSumbitBaggage.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, 120, -1));
+
+        jLabel24.setText("Flight number :");
+        EmployeeSumbitBaggage.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, -1, -1));
+
+        jLabel25.setText("Description :");
+        EmployeeSumbitBaggage.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 160, -1, -1));
+
+        jTextArea2.setColumns(20);
+        jTextArea2.setRows(5);
+        jScrollPane4.setViewportView(jTextArea2);
+
+        EmployeeSumbitBaggage.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 160, 210, 170));
+
+        jButton2.setText("Save & Exit");
+        EmployeeSumbitBaggage.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 400, -1, -1));
+
+        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/corendon-airlines.jpg"))); // NOI18N
+        jLabel26.setText("jLabel11");
+        EmployeeSumbitBaggage.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 30, 300, 70));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/00000001.JPG"))); // NOI18N
+        jLabel7.setToolTipText("");
+        jLabel7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        EmployeeSumbitBaggage.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 970, 482));
+
+        EmployeeHome.add(EmployeeSumbitBaggage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 490));
+
+        EmpolyeeAddBaggage.setBackground(new java.awt.Color(153, 51, 51));
+        EmpolyeeAddBaggage.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.gray, null, java.awt.Color.lightGray));
+        EmpolyeeAddBaggage.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/corendon-airlines.jpg"))); // NOI18N
+        jLabel13.setText("jLabel11");
+        EmpolyeeAddBaggage.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 30, 300, 70));
+
+        jLabel1.setText("Department :");
+        EmpolyeeAddBaggage.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, -1, -1));
+
+        jLabel2.setText("Color :");
+        EmpolyeeAddBaggage.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 220, 40, -1));
+
+        jLabel6.setText("Brand :");
+        EmpolyeeAddBaggage.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, -1, -1));
+
+        jLabel8.setText("Description :");
+        EmpolyeeAddBaggage.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 160, -1, -1));
+
+        jLabel16.setText("Materials :");
+        EmpolyeeAddBaggage.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, -1, 20));
+
+        jLabel17.setText("Flight number :");
+        EmpolyeeAddBaggage.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, -1, -1));
+
+        jLabel18.setText("Weight :");
+        EmpolyeeAddBaggage.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, -1, 20));
+
+        jTextField1.setText("jTextField1");
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        EmpolyeeAddBaggage.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 190, 120, -1));
+
+        jTextField2.setText("jTextField1");
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
+        EmpolyeeAddBaggage.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 220, 120, -1));
+
+        jTextField3.setText("jTextField1");
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
+        EmpolyeeAddBaggage.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 250, 120, -1));
+
+        jTextField7.setText("jTextField1");
+        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField7ActionPerformed(evt);
+            }
+        });
+        EmpolyeeAddBaggage.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, 120, -1));
+
+        jTextField8.setText("jTextField1");
+        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField8ActionPerformed(evt);
+            }
+        });
+        EmpolyeeAddBaggage.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 310, 120, -1));
+
+        jTextField9.setText("jTextField1");
+        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField9ActionPerformed(evt);
+            }
+        });
+        EmpolyeeAddBaggage.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, 120, -1));
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane2.setViewportView(jTextArea1);
+
+        EmpolyeeAddBaggage.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 160, 210, 170));
+
+        jButton1.setText("Save & Exit");
+        EmpolyeeAddBaggage.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 400, -1, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/00000001.JPG"))); // NOI18N
+        jLabel4.setToolTipText("");
+        jLabel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        EmpolyeeAddBaggage.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 490));
+
+        EmployeeHome.add(EmpolyeeAddBaggage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        EmployeeHelp.setBackground(new java.awt.Color(153, 51, 51));
+        EmployeeHelp.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.gray, null, java.awt.Color.lightGray));
+        EmployeeHelp.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jList3.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Baggage status" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane3.setViewportView(jList3);
+
+        EmployeeHelp.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 540, 220));
+
+        jCheckBox6.setText("All");
+        EmployeeHelp.add(jCheckBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, -1));
+
+        jCheckBox7.setText("Time");
+        EmployeeHelp.add(jCheckBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 110, -1));
+
+        jCheckBox8.setText("Users");
+        EmployeeHelp.add(jCheckBox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 110, -1));
+
+        jTextField6.setText("Search");
+        EmployeeHelp.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, 540, -1));
+
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/seoLogo.png"))); // NOI18N
+        EmployeeHelp.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 120, -1, -1));
+
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/corendon-airlines.jpg"))); // NOI18N
+        jLabel15.setText("jLabel11");
+        EmployeeHelp.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 30, 300, 70));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/00000001.JPG"))); // NOI18N
+        jLabel5.setToolTipText("");
+        jLabel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        EmployeeHelp.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 971, 482));
+
+        EmployeeHome.add(EmployeeHelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 490));
+
+        jPanel1.add(EmployeeHome, java.awt.BorderLayout.CENTER);
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 910, 460));
 
         menu.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -233,42 +579,6 @@ public class Employee extends javax.swing.JFrame {
 
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 650));
 
-        employeeAddBaggage.setBackground(new java.awt.Color(153, 51, 51));
-        employeeAddBaggage.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        addBaggageTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        addBaggageTitle.setText("Add Baggage");
-        employeeAddBaggage.add(addBaggageTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
-
-        getContentPane().add(employeeAddBaggage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 470));
-
-        employeeSearch.setBackground(new java.awt.Color(153, 51, 51));
-        employeeSearch.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        SearchTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        SearchTitle.setText("Search");
-        employeeSearch.add(SearchTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
-
-        getContentPane().add(employeeSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 470));
-
-        employeeSubmitRequest.setBackground(new java.awt.Color(153, 51, 51));
-        employeeSubmitRequest.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        submitRequestTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        submitRequestTitle.setText("Submit Request");
-        employeeSubmitRequest.add(submitRequestTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
-
-        getContentPane().add(employeeSubmitRequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 470));
-
-        employeeHelp.setBackground(new java.awt.Color(153, 51, 51));
-        employeeHelp.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        helpTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        helpTitle.setText("Help");
-        employeeHelp.add(helpTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
-
-        getContentPane().add(employeeHelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 470));
-
         bindingGroup.bind();
 
         pack();
@@ -317,7 +627,7 @@ public class Employee extends javax.swing.JFrame {
     private void homeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButtonMouseClicked
         jPanel1.removeAll();
         jPanel1.revalidate();
-        jPanel1.add(employeeHome);
+        jPanel1.add(EmployeeHome);
         jPanel1.repaint();
         jPanel1.revalidate();
     }//GEN-LAST:event_homeButtonMouseClicked
@@ -325,7 +635,7 @@ public class Employee extends javax.swing.JFrame {
     private void searchButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchButtonMouseClicked
         jPanel1.removeAll();
         jPanel1.revalidate();
-        jPanel1.add(employeeSearch);
+        jPanel1.add(EmployeeSearch);
         jPanel1.repaint();
         jPanel1.revalidate();
     }//GEN-LAST:event_searchButtonMouseClicked
@@ -333,7 +643,7 @@ public class Employee extends javax.swing.JFrame {
     private void addBaggageButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addBaggageButtonMouseClicked
         jPanel1.removeAll();
         jPanel1.revalidate();
-        jPanel1.add(employeeAddBaggage);
+        jPanel1.add(EmpolyeeAddBaggage);
         jPanel1.repaint();
         jPanel1.revalidate();
     }//GEN-LAST:event_addBaggageButtonMouseClicked
@@ -341,7 +651,7 @@ public class Employee extends javax.swing.JFrame {
     private void submitBaggageButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_submitBaggageButtonMouseClicked
         jPanel1.removeAll();
         jPanel1.revalidate();
-        jPanel1.add(employeeSubmitRequest);
+        jPanel1.add(EmployeeSumbitBaggage);
         jPanel1.repaint();
         jPanel1.revalidate();
     }//GEN-LAST:event_submitBaggageButtonMouseClicked
@@ -349,7 +659,7 @@ public class Employee extends javax.swing.JFrame {
     private void helpButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpButtonMouseClicked
         jPanel1.removeAll();
         jPanel1.revalidate();
-        jPanel1.add(employeeHelp);
+        jPanel1.add(EmployeeHelp);
         jPanel1.repaint();
         jPanel1.revalidate();
     }//GEN-LAST:event_helpButtonMouseClicked
@@ -361,6 +671,58 @@ public class Employee extends javax.swing.JFrame {
     private void logoutKnopMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutKnopMouseExited
         logoutKnop.setBackground(new java.awt.Color(153,51,51));
     }//GEN-LAST:event_logoutKnopMouseExited
+
+    private void nameBarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameBarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nameBarActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ActionPerformed
+
+    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField7ActionPerformed
+
+    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField8ActionPerformed
+
+    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField9ActionPerformed
+
+    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField10ActionPerformed
+
+    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField11ActionPerformed
+
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField5ActionPerformed
+
+    private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField12ActionPerformed
+
+    private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField13ActionPerformed
+
+    private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField14ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -399,27 +761,81 @@ public class Employee extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
+    private javax.swing.JLabel Backgroundlabel;
+    private javax.swing.JPanel EmployeeHelp;
+    private javax.swing.JPanel EmployeeHome;
+    private javax.swing.JPanel EmployeeSearch;
+    private javax.swing.JPanel EmployeeSumbitBaggage;
+    private javax.swing.JPanel EmpolyeeAddBaggage;
     private javax.swing.JLabel ID;
+    private javax.swing.JLabel IDText;
     private javax.swing.JLabel Name;
-    private javax.swing.JLabel SearchTitle;
+    private javax.swing.JTextField accountType;
+    private javax.swing.JLabel accountTypeNaam;
     private javax.swing.JLabel addBaggageButton;
-    private javax.swing.JLabel addBaggageTitle;
-    private javax.swing.JPanel employeeAddBaggage;
-    private javax.swing.JPanel employeeHelp;
-    private javax.swing.JPanel employeeHome;
-    private javax.swing.JPanel employeeSearch;
-    private javax.swing.JPanel employeeSubmitRequest;
     private javax.swing.JLabel helpButton;
-    private javax.swing.JLabel helpTitle;
     private javax.swing.JLabel homeButton;
+    private javax.swing.JTextField idBar;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JCheckBox jCheckBox6;
+    private javax.swing.JCheckBox jCheckBox7;
+    private javax.swing.JCheckBox jCheckBox8;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JList jList1;
+    private javax.swing.JList jList3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField11;
+    private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField13;
+    private javax.swing.JTextField jTextField14;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     private javax.swing.JLabel logoutKnop;
     private javax.swing.JPanel menu;
+    private javax.swing.JLabel naamText;
+    private javax.swing.JTextField nameBar;
     private javax.swing.JLabel searchButton;
     private javax.swing.JLabel submitBaggageButton;
-    private javax.swing.JLabel submitRequestTitle;
+    private javax.swing.JLabel welcomeText;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 
