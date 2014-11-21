@@ -95,9 +95,9 @@ public class Manager extends javax.swing.JFrame {
         helpTitle1.setText("Welkom Manager,");
         ManagerHome.add(helpTitle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 50, -1, -1));
 
-        jPanel1.add(ManagerHome, java.awt.BorderLayout.LINE_START);
+        jPanel1.add(ManagerHome, java.awt.BorderLayout.CENTER);
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 140, 990, 500));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, 890, 450));
 
         menu.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -256,7 +256,7 @@ public class Manager extends javax.swing.JFrame {
         addBaggageTitle.setText("Search");
         ManagerSearch.add(addBaggageTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
 
-        getContentPane().add(ManagerSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 470));
+        getContentPane().add(ManagerSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 950, 320));
 
         Managerstatus.setBackground(new java.awt.Color(153, 51, 51));
         Managerstatus.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
