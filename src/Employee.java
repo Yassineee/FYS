@@ -1,3 +1,4 @@
+
 import java.awt.Dimension;
 import java.awt.Toolkit;
 
@@ -11,9 +12,8 @@ import java.awt.Toolkit;
  * @author EdoTyran
  */
 public class Employee extends javax.swing.JFrame {
-
+    
     int xMouse, yMouse;
-
     /**
      * Creates new form Employee
      */
@@ -34,23 +34,22 @@ public class Employee extends javax.swing.JFrame {
         Name = new javax.swing.JLabel();
         ID = new javax.swing.JLabel();
         Logout = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
-        employeeAddBaggage = new javax.swing.JPanel();
-        addBaggageTitle = new javax.swing.JLabel();
-        employeeSearch = new javax.swing.JPanel();
-        SearchTitle = new javax.swing.JLabel();
         employeeHome = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        employeeSearch = new javax.swing.JPanel();
+        SearchTitle = new javax.swing.JLabel();
+        employeeAddBaggage = new javax.swing.JPanel();
+        addBaggageTitle = new javax.swing.JLabel();
         employeeSubmitRequest = new javax.swing.JPanel();
         submitRequestTitle = new javax.swing.JLabel();
         employeeHelp = new javax.swing.JPanel();
         helpTitle = new javax.swing.JLabel();
         menu = new javax.swing.JPanel();
         helpButtom = new javax.swing.JToggleButton();
+        homeButtom = new javax.swing.JToggleButton();
+        searchbuttom = new javax.swing.JToggleButton();
         addBaggageButtom = new javax.swing.JToggleButton();
         submitRequestButtom = new javax.swing.JToggleButton();
-        employeeHomeButton = new javax.swing.JButton();
-        employeeSearchButton = new javax.swing.JButton();
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -79,17 +78,14 @@ public class Employee extends javax.swing.JFrame {
         });
         getContentPane().add(Logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 90, 70, 30));
 
-        jPanel1.setBackground(new java.awt.Color(153, 51, 51));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        employeeHome.setBackground(new java.awt.Color(153, 51, 51));
+        employeeHome.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        employeeAddBaggage.setBackground(new java.awt.Color(153, 51, 51));
-        employeeAddBaggage.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setText("Home");
+        employeeHome.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
 
-        addBaggageTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        addBaggageTitle.setText("Add Baggage");
-        employeeAddBaggage.add(addBaggageTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
-
-        jPanel1.add(employeeAddBaggage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 470));
+        getContentPane().add(employeeHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(285, 150, 910, 470));
 
         employeeSearch.setBackground(new java.awt.Color(153, 51, 51));
         employeeSearch.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -98,16 +94,16 @@ public class Employee extends javax.swing.JFrame {
         SearchTitle.setText("Search");
         employeeSearch.add(SearchTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
 
-        jPanel1.add(employeeSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 470));
+        getContentPane().add(employeeSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(285, 150, 910, 470));
 
-        employeeHome.setBackground(new java.awt.Color(153, 51, 51));
-        employeeHome.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        employeeAddBaggage.setBackground(new java.awt.Color(153, 51, 51));
+        employeeAddBaggage.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Home");
-        employeeHome.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
+        addBaggageTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        addBaggageTitle.setText("Add Baggage");
+        employeeAddBaggage.add(addBaggageTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
 
-        jPanel1.add(employeeHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 440));
+        getContentPane().add(employeeAddBaggage, new org.netbeans.lib.awtextra.AbsoluteConstraints(285, 150, 910, 470));
 
         employeeSubmitRequest.setBackground(new java.awt.Color(153, 51, 51));
         employeeSubmitRequest.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -116,7 +112,7 @@ public class Employee extends javax.swing.JFrame {
         submitRequestTitle.setText("Submit Request");
         employeeSubmitRequest.add(submitRequestTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
 
-        jPanel1.add(employeeSubmitRequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 470));
+        getContentPane().add(employeeSubmitRequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(285, 150, 910, 470));
 
         employeeHelp.setBackground(new java.awt.Color(153, 51, 51));
         employeeHelp.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -125,11 +121,10 @@ public class Employee extends javax.swing.JFrame {
         helpTitle.setText("Help");
         employeeHelp.add(helpTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
 
-        jPanel1.add(employeeHelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 470));
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 140, 990, 500));
+        getContentPane().add(employeeHelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(285, 150, 920, 470));
 
         menu.setBackground(new java.awt.Color(255, 255, 255));
+        menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         helpButtom.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         helpButtom.setText("Help");
@@ -138,6 +133,26 @@ public class Employee extends javax.swing.JFrame {
                 helpButtomActionPerformed(evt);
             }
         });
+        menu.add(helpButtom, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 110, 40));
+
+        homeButtom.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        homeButtom.setText("Home");
+        homeButtom.setToolTipText("Hiermee kom je op de home-pagina");
+        homeButtom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                homeButtomActionPerformed(evt);
+            }
+        });
+        menu.add(homeButtom, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 110, 40));
+
+        searchbuttom.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        searchbuttom.setText("Search");
+        searchbuttom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchbuttomActionPerformed(evt);
+            }
+        });
+        menu.add(searchbuttom, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 110, 40));
 
         addBaggageButtom.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         addBaggageButtom.setText("Add baggage");
@@ -146,6 +161,7 @@ public class Employee extends javax.swing.JFrame {
                 addBaggageButtomActionPerformed(evt);
             }
         });
+        menu.add(addBaggageButtom, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 110, 40));
 
         submitRequestButtom.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         submitRequestButtom.setText("Submit Request");
@@ -157,55 +173,9 @@ public class Employee extends javax.swing.JFrame {
                 submitRequestButtomActionPerformed(evt);
             }
         });
+        menu.add(submitRequestButtom, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 110, 40));
 
-        employeeHomeButton.setText("Home");
-        employeeHomeButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                employeeHomeButtonMouseClicked(evt);
-            }
-        });
-        employeeHomeButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                employeeHomeButtonActionPerformed(evt);
-            }
-        });
-
-        employeeSearchButton.setText("Search");
-        employeeSearchButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                employeeSearchButtonMouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout menuLayout = new javax.swing.GroupLayout(menu);
-        menu.setLayout(menuLayout);
-        menuLayout.setHorizontalGroup(
-            menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(menuLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(employeeHomeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(employeeSearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(addBaggageButtom, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(submitRequestButtom, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(helpButtom, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
-        menuLayout.setVerticalGroup(
-            menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(menuLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(employeeHomeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(employeeSearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(addBaggageButtom, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(submitRequestButtom, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(helpButtom, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
-        getContentPane().add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 150, 410));
+        getContentPane().add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 150, 430));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/layoutCorendonFinalVeranderd.png"))); // NOI18N
 
@@ -227,6 +197,14 @@ public class Employee extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_helpButtomActionPerformed
 
+    private void homeButtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeButtomActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_homeButtomActionPerformed
+
+    private void searchbuttomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchbuttomActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_searchbuttomActionPerformed
+
     private void addBaggageButtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBaggageButtomActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_addBaggageButtomActionPerformed
@@ -234,27 +212,6 @@ public class Employee extends javax.swing.JFrame {
     private void submitRequestButtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitRequestButtomActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_submitRequestButtomActionPerformed
-
-    private void employeeHomeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeeHomeButtonActionPerformed
-        jPanel1.removeAll();
-        jPanel1.revalidate();
-        jPanel1.add(employeeHome);
-        jPanel1.revalidate();
-    }//GEN-LAST:event_employeeHomeButtonActionPerformed
-
-    private void employeeHomeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_employeeHomeButtonMouseClicked
-        jPanel1.removeAll();
-        jPanel1.revalidate();
-        jPanel1.add(employeeHome);
-        jPanel1.revalidate();
-    }//GEN-LAST:event_employeeHomeButtonMouseClicked
-
-    private void employeeSearchButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_employeeSearchButtonMouseClicked
-        jPanel1.removeAll();
-        jPanel1.revalidate();
-        jPanel1.add(employeeSearch);
-        jPanel1.revalidate();
-    }//GEN-LAST:event_employeeSearchButtonMouseClicked
 
     /**
      * @param args the command line arguments
@@ -302,21 +259,20 @@ public class Employee extends javax.swing.JFrame {
     private javax.swing.JPanel employeeAddBaggage;
     private javax.swing.JPanel employeeHelp;
     private javax.swing.JPanel employeeHome;
-    private javax.swing.JButton employeeHomeButton;
     private javax.swing.JPanel employeeSearch;
-    private javax.swing.JButton employeeSearchButton;
     private javax.swing.JPanel employeeSubmitRequest;
     private javax.swing.JToggleButton helpButtom;
     private javax.swing.JLabel helpTitle;
+    private javax.swing.JToggleButton homeButtom;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel menu;
+    private javax.swing.JToggleButton searchbuttom;
     private javax.swing.JToggleButton submitRequestButtom;
     private javax.swing.JLabel submitRequestTitle;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 
-    Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-    double width = screenSize.getWidth();
-    double height = screenSize.getHeight();
+Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+double width = screenSize.getWidth();
+double height = screenSize.getHeight();
 }
