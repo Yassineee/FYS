@@ -1,6 +1,8 @@
 package view;
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -13,16 +15,12 @@ import java.awt.*;
  */
 public class Manager extends javax.swing.JFrame {
 
+    int xMouse, yMouse;
 
     /**
      * Creates new form Employee
      */
     public Manager() {
-        super("Lost Baggage");
-        setSize(1300,650);
-        setResizable(false);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setVisible(true);
         initComponents();
     }
 

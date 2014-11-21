@@ -1,5 +1,7 @@
-import javax.swing.*;
-import view.*;
+
+
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -12,7 +14,6 @@ import view.*;
 public class Login extends javax.swing.JFrame {
 
     int xMouse, yMouse;
-
     /**
      * Creates new form Login
      */
@@ -85,11 +86,6 @@ public class Login extends javax.swing.JFrame {
         jPasswordField1.setForeground(new java.awt.Color(250, 250, 250));
         jPasswordField1.setText("jPasswordField1");
         jPasswordField1.setBorder(null);
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
-            }
-        });
         getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 200, 250, 20));
 
         Login.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -132,41 +128,16 @@ public class Login extends javax.swing.JFrame {
     private void DragFrameMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DragFrameMouseDragged
         int x = evt.getXOnScreen();
         int y = evt.getYOnScreen();
+        
         this.setLocation(x - xMouse, y - yMouse);
     }//GEN-LAST:event_DragFrameMouseDragged
 
     private void LoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginMouseClicked
-        if (null != Username.getText()) {
-            switch (Username.getText()) {
-                case "Employee1":
-                    if ("Employee1".equals(jPasswordField1.getText())) {
-                        Employee Employee = new Employee();
-                        this.dispose();
-                    }
-                    break;
-                case "Admin1":
-                    if ("Admin1".equals(jPasswordField1.getText())) {
-                        Adminhome Adminhome = new Adminhome();
-                        this.dispose();
-                    }
-                    break;
-                case "Manager1":
-                    if ("Manager1".equals(jPasswordField1.getText())) {
-                        Manager Manager = new Manager();
-                        this.dispose();
-                    }
-                    break;
-                default:
-                    JOptionPane.showMessageDialog(this, "Invalid Username or Password!");
-                    break;
-            }
-        }
-    }//GEN-LAST:event_LoginMouseClicked
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
-
+        
+    }//GEN-LAST:event_LoginMouseClicked
+                                      
     /**
      * @param args the command line arguments
      */
@@ -213,5 +184,3 @@ public class Login extends javax.swing.JFrame {
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }
-
-
