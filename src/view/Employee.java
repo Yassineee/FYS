@@ -40,6 +40,7 @@ public class Employee extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         employeeHome = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         menu = new javax.swing.JPanel();
         homeButton = new javax.swing.JLabel();
         searchButton = new javax.swing.JLabel();
@@ -91,6 +92,9 @@ public class Employee extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Home");
         employeeHome.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/layoutCorendonFinalVeranderd_1.png"))); // NOI18N
+        employeeHome.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 990, 500));
 
         jPanel1.add(employeeHome, java.awt.BorderLayout.CENTER);
 
@@ -399,6 +403,7 @@ public class Employee extends javax.swing.JFrame {
     private javax.swing.JLabel helpTitle;
     private javax.swing.JLabel homeButton;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel menu;
     private javax.swing.JLabel searchButton;
