@@ -17,10 +17,10 @@ public class QueryManager {
         this.dbmanager = dbmanager;
     }
 
-    public String getCategoryName(int categoryId) {
+    public String getCategoryName(int klantId) {
         String categoryName = "";
         try {
-            String sql = "SELECT naam FROM categorie WHERE categorie_id='" + categoryId + "'";
+            String sql = "SELECT naam FROM categorie WHERE categorie_id='" + klantId + "'";
             ResultSet result = dbmanager.doQuery(sql);
             while (result.next()) {
                 categoryName = result.getString("naam");
