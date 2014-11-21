@@ -22,7 +22,7 @@ public class Employee extends javax.swing.JFrame {
      */
     public Employee() {
         super("Lost Baggage");
-        setSize(1300,650);
+        setSize(1300, 650);
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
@@ -148,8 +148,6 @@ public class Employee extends javax.swing.JFrame {
         accountTypeNaam.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         accountTypeNaam.setText("Account type:");
         EmployeeHome.add(accountTypeNaam, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, 110, 30));
-
-        jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\Yassinee\\Downloads\\CorendonLogo.png")); // NOI18N
         EmployeeHome.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, 200, 80));
 
         IDText.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -561,8 +559,12 @@ public class Employee extends javax.swing.JFrame {
         logoutKnop.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         logoutKnop.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         logoutKnop.setText("LOGOUT");
+        logoutKnop.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         logoutKnop.setOpaque(true);
         logoutKnop.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                logoutKnopMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 logoutKnopMouseEntered(evt);
             }
@@ -665,11 +667,11 @@ public class Employee extends javax.swing.JFrame {
     }//GEN-LAST:event_helpButtonMouseClicked
 
     private void logoutKnopMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutKnopMouseEntered
-        logoutKnop.setBackground(new java.awt.Color(224,90,90));
+        logoutKnop.setBackground(new java.awt.Color(224, 90, 90));
     }//GEN-LAST:event_logoutKnopMouseEntered
 
     private void logoutKnopMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutKnopMouseExited
-        logoutKnop.setBackground(new java.awt.Color(153,51,51));
+        logoutKnop.setBackground(new java.awt.Color(153, 51, 51));
     }//GEN-LAST:event_logoutKnopMouseExited
 
     private void nameBarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameBarActionPerformed
@@ -723,6 +725,11 @@ public class Employee extends javax.swing.JFrame {
     private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField14ActionPerformed
+
+    private void logoutKnopMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutKnopMouseClicked
+        Login Login = new Login();
+        this.dispose();
+    }//GEN-LAST:event_logoutKnopMouseClicked
 
     /**
      * @param args the command line arguments

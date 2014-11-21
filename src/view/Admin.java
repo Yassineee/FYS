@@ -174,8 +174,6 @@ public class Admin extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("Account type:");
         AdminHome.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, 110, 30));
-
-        jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\Yassinee\\Downloads\\CorendonLogo.png")); // NOI18N
         AdminHome.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, 200, 80));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -658,6 +656,7 @@ public class Admin extends javax.swing.JFrame {
         logoutKnop.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         logoutKnop.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         logoutKnop.setText("LOGOUT");
+        logoutKnop.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         logoutKnop.setOpaque(true);
         logoutKnop.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {

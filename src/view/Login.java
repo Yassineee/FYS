@@ -1,5 +1,7 @@
+package view;
+
 import javax.swing.JOptionPane;
-import view.*;
+import java.awt.*;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -12,11 +14,21 @@ import view.*;
  */
 public class Login extends javax.swing.JFrame {
 
+    static int ICONIFIED;
     int xMouse, yMouse;
     /**
      * Creates new form Login
      */
     public Login() {
+        initComponents();
+    }
+    
+    public Login(int x){
+        setSize(600,300);
+        setResizable(false);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setUndecorated(true);
+        setVisible(true);
         initComponents();
     }
 
@@ -35,7 +47,7 @@ public class Login extends javax.swing.JFrame {
         DragFrame = new javax.swing.JLabel();
         username = new javax.swing.JTextField();
         password = new javax.swing.JPasswordField();
-        jLabel1 = new javax.swing.JLabel();
+        loginButoon = new javax.swing.JLabel();
         Achtergrond = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -87,25 +99,25 @@ public class Login extends javax.swing.JFrame {
         password.setBorder(null);
         getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 200, 250, 20));
 
-        jLabel1.setBackground(new java.awt.Color(179, 15, 22));
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(250, 250, 250));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("LOGIN");
-        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel1.setOpaque(true);
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+        loginButoon.setBackground(new java.awt.Color(179, 15, 22));
+        loginButoon.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        loginButoon.setForeground(new java.awt.Color(250, 250, 250));
+        loginButoon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        loginButoon.setText("LOGIN");
+        loginButoon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        loginButoon.setOpaque(true);
+        loginButoon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel1MouseClicked(evt);
+                loginButoonMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel1MouseEntered(evt);
+                loginButoonMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel1MouseExited(evt);
+                loginButoonMouseExited(evt);
             }
         });
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(284, 230, 70, 30));
+        getContentPane().add(loginButoon, new org.netbeans.lib.awtextra.AbsoluteConstraints(284, 230, 70, 30));
 
         Achtergrond.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/LoginScherm2.png"))); // NOI18N
 
@@ -128,7 +140,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_ExitMouseClicked
 
     private void MiniMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MiniMouseClicked
-        this.setState(Main.ICONIFIED);
+        this.setState(Login.ICONIFIED);
     }//GEN-LAST:event_MiniMouseClicked
 
     private void DragFrameMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DragFrameMousePressed
@@ -143,15 +155,15 @@ public class Login extends javax.swing.JFrame {
         this.setLocation(x - xMouse, y - yMouse);
     }//GEN-LAST:event_DragFrameMouseDragged
 
-    private void jLabel1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseEntered
-        jLabel1.setBackground(new java.awt.Color(229,65,72));
-    }//GEN-LAST:event_jLabel1MouseEntered
+    private void loginButoonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginButoonMouseEntered
+        loginButoon.setBackground(new java.awt.Color(229,65,72));
+    }//GEN-LAST:event_loginButoonMouseEntered
 
-    private void jLabel1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseExited
-        jLabel1.setBackground(new java.awt.Color(179,15,22));
-    }//GEN-LAST:event_jLabel1MouseExited
+    private void loginButoonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginButoonMouseExited
+        loginButoon.setBackground(new java.awt.Color(179,15,22));
+    }//GEN-LAST:event_loginButoonMouseExited
 
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+    private void loginButoonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginButoonMouseClicked
         if (null != username.getText()) {
             switch (username.getText()) {
                 case "Employee1":
@@ -178,7 +190,7 @@ public class Login extends javax.swing.JFrame {
             }
         }
     
-    }//GEN-LAST:event_jLabel1MouseClicked
+    }//GEN-LAST:event_loginButoonMouseClicked
                                       
     /**
      * @param args the command line arguments
@@ -220,7 +232,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel DragFrame;
     private javax.swing.JLabel Exit;
     private javax.swing.JLabel Mini;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel loginButoon;
     private javax.swing.JPasswordField password;
     private javax.swing.JTextField username;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
