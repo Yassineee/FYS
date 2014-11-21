@@ -40,6 +40,53 @@ public class Manager extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         ManagerHome = new javax.swing.JPanel();
         helpTitle1 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        Backgroundlabel = new javax.swing.JLabel();
+        ManagerSearch = new javax.swing.JPanel();
+        jTextField4 = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        ManagerStatus = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jList2 = new javax.swing.JList();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jCheckBox2 = new javax.swing.JCheckBox();
+        jCheckBox3 = new javax.swing.JCheckBox();
+        jCheckBox4 = new javax.swing.JCheckBox();
+        jTextField5 = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        ManagerLogfiles = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jList3 = new javax.swing.JList();
+        jCheckBox6 = new javax.swing.JCheckBox();
+        jCheckBox7 = new javax.swing.JCheckBox();
+        jCheckBox8 = new javax.swing.JCheckBox();
+        jTextField6 = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        ManagerGraphs = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jList4 = new javax.swing.JList();
+        jCheckBox9 = new javax.swing.JCheckBox();
+        jCheckBox10 = new javax.swing.JCheckBox();
+        jCheckBox11 = new javax.swing.JCheckBox();
+        jLabel6 = new javax.swing.JLabel();
+        ManagerHelp = new javax.swing.JPanel();
+        helpTitle6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         menu = new javax.swing.JPanel();
         homeButton = new javax.swing.JLabel();
         searchButton = new javax.swing.JLabel();
@@ -48,16 +95,6 @@ public class Manager extends javax.swing.JFrame {
         Graphbutton = new javax.swing.JLabel();
         helpButton1 = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
-        ManagerSearch = new javax.swing.JPanel();
-        addBaggageTitle = new javax.swing.JLabel();
-        Managerstatus = new javax.swing.JPanel();
-        SearchTitle = new javax.swing.JLabel();
-        ManagerLogfiles = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        Managerhelp = new javax.swing.JPanel();
-        submitRequestTitle = new javax.swing.JLabel();
-        ManagerGraphs = new javax.swing.JPanel();
-        helpTitle = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Lost Baggage");
@@ -86,18 +123,217 @@ public class Manager extends javax.swing.JFrame {
         getContentPane().add(Logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 90, 70, 30));
 
         jPanel1.setBackground(new java.awt.Color(153, 51, 51));
+        jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
+        jPanel1.setForeground(new java.awt.Color(153, 51, 51));
         jPanel1.setLayout(new java.awt.BorderLayout());
 
         ManagerHome.setBackground(new java.awt.Color(153, 51, 51));
+        ManagerHome.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
         ManagerHome.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        helpTitle1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        helpTitle1.setText("Welkom Manager,");
-        ManagerHome.add(helpTitle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 50, -1, -1));
+        helpTitle1.setFont(new java.awt.Font("Tahoma", 2, 24)); // NOI18N
+        helpTitle1.setText("Welcome Manager,");
+        ManagerHome.add(helpTitle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 140, -1, -1));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel1.setText("Name: ");
+        ManagerHome.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 250, 50, 20));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel2.setText("Account type:");
+        ManagerHome.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, 110, 30));
+
+        jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\Yassinee\\Downloads\\CorendonLogo.png")); // NOI18N
+        ManagerHome.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, 200, 80));
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel8.setText("ID:");
+        ManagerHome.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, 50, 20));
+
+        jTextField1.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
+        jTextField1.setText("Example: John");
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        ManagerHome.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 260, 100, -1));
+
+        jTextField2.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
+        jTextField2.setText("Example: Manager");
+        ManagerHome.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 300, 100, -1));
+
+        jTextField3.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
+        jTextField3.setText("Example: 3");
+        ManagerHome.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 220, 100, -1));
+
+        Backgroundlabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/00000001.JPG"))); // NOI18N
+        Backgroundlabel.setToolTipText("");
+        Backgroundlabel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        ManagerHome.add(Backgroundlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 450));
+
+        ManagerSearch.setBackground(new java.awt.Color(153, 51, 51));
+        ManagerSearch.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
+        ManagerSearch.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jTextField4.setText("Search");
+        ManagerSearch.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, 540, -1));
+
+        jList1.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "search results" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(jList1);
+
+        ManagerSearch.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 540, 220));
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/seoLogo.png"))); // NOI18N
+        ManagerSearch.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 120, -1, -1));
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/corendon-airlines.jpg"))); // NOI18N
+        jLabel11.setText("jLabel11");
+        ManagerSearch.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 30, 300, 70));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/00000001.JPG"))); // NOI18N
+        jLabel3.setToolTipText("");
+        jLabel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        ManagerSearch.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 450));
+
+        ManagerStatus.setBackground(new java.awt.Color(153, 51, 51));
+        ManagerStatus.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.gray, null, java.awt.Color.lightGray));
+        ManagerStatus.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jList2.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Baggage status" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane2.setViewportView(jList2);
+
+        ManagerStatus.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 540, 220));
+
+        jCheckBox1.setText("Lost baggage");
+        ManagerStatus.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 110, -1));
+
+        jCheckBox2.setText("Found baggage");
+        ManagerStatus.add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 110, -1));
+
+        jCheckBox3.setText("Handled Baggage");
+        ManagerStatus.add(jCheckBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, -1));
+
+        jCheckBox4.setText("Overview");
+        ManagerStatus.add(jCheckBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 110, -1));
+
+        jTextField5.setText("Search");
+        ManagerStatus.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, 540, -1));
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/seoLogo.png"))); // NOI18N
+        ManagerStatus.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 120, -1, -1));
+
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/corendon-airlines.jpg"))); // NOI18N
+        jLabel13.setText("jLabel11");
+        ManagerStatus.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 30, 300, 70));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/00000001.JPG"))); // NOI18N
+        jLabel4.setToolTipText("");
+        jLabel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        ManagerStatus.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 450));
+
+        ManagerSearch.add(ManagerStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        ManagerHome.add(ManagerSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        ManagerLogfiles.setBackground(new java.awt.Color(153, 51, 51));
+        ManagerLogfiles.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.gray, null, java.awt.Color.lightGray));
+        ManagerLogfiles.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jList3.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Baggage status" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane3.setViewportView(jList3);
+
+        ManagerLogfiles.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 540, 220));
+
+        jCheckBox6.setText("All");
+        ManagerLogfiles.add(jCheckBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, -1));
+
+        jCheckBox7.setText("Time");
+        ManagerLogfiles.add(jCheckBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 110, -1));
+
+        jCheckBox8.setText("Users");
+        ManagerLogfiles.add(jCheckBox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 110, -1));
+
+        jTextField6.setText("Search");
+        ManagerLogfiles.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, 540, -1));
+
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/seoLogo.png"))); // NOI18N
+        ManagerLogfiles.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 120, -1, -1));
+
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/corendon-airlines.jpg"))); // NOI18N
+        jLabel15.setText("jLabel11");
+        ManagerLogfiles.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 30, 300, 70));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/00000001.JPG"))); // NOI18N
+        jLabel5.setToolTipText("");
+        jLabel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        ManagerLogfiles.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 450));
+
+        ManagerHome.add(ManagerLogfiles, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        ManagerGraphs.setBackground(new java.awt.Color(153, 51, 51));
+        ManagerGraphs.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.gray, null, java.awt.Color.lightGray));
+        ManagerGraphs.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/corendon-airlines.jpg"))); // NOI18N
+        jLabel16.setText("jLabel11");
+        ManagerGraphs.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 30, 300, 70));
+
+        jList4.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Grafiek here" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane4.setViewportView(jList4);
+
+        ManagerGraphs.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 540, 220));
+
+        jCheckBox9.setText("Day");
+        ManagerGraphs.add(jCheckBox9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, -1));
+
+        jCheckBox10.setText("Month");
+        ManagerGraphs.add(jCheckBox10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 110, -1));
+
+        jCheckBox11.setText("Year");
+        ManagerGraphs.add(jCheckBox11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 110, -1));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/00000001.JPG"))); // NOI18N
+        jLabel6.setToolTipText("");
+        jLabel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        ManagerGraphs.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 450));
+
+        ManagerHome.add(ManagerGraphs, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        ManagerHelp.setBackground(new java.awt.Color(153, 51, 51));
+        ManagerHelp.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.gray, null, java.awt.Color.lightGray));
+        ManagerHelp.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        helpTitle6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        helpTitle6.setText("Welkom Manager,");
+        ManagerHelp.add(helpTitle6, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 20, -1, -1));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/00000001.JPG"))); // NOI18N
+        jLabel7.setToolTipText("");
+        jLabel7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        ManagerHelp.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 450));
+
+        ManagerHome.add(ManagerHelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jPanel1.add(ManagerHome, java.awt.BorderLayout.CENTER);
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, 890, 450));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 910, 460));
 
         menu.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -249,51 +485,6 @@ public class Manager extends javax.swing.JFrame {
 
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 650));
 
-        ManagerSearch.setBackground(new java.awt.Color(153, 51, 51));
-        ManagerSearch.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        addBaggageTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        addBaggageTitle.setText("Search");
-        ManagerSearch.add(addBaggageTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
-
-        getContentPane().add(ManagerSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 950, 320));
-
-        Managerstatus.setBackground(new java.awt.Color(153, 51, 51));
-        Managerstatus.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        SearchTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        SearchTitle.setText("Search");
-        Managerstatus.add(SearchTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
-
-        getContentPane().add(Managerstatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 470));
-
-        ManagerLogfiles.setBackground(new java.awt.Color(153, 51, 51));
-        ManagerLogfiles.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Manager Logfiles");
-        ManagerLogfiles.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
-
-        getContentPane().add(ManagerLogfiles, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 440));
-
-        Managerhelp.setBackground(new java.awt.Color(153, 51, 51));
-        Managerhelp.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        submitRequestTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        submitRequestTitle.setText("Help");
-        Managerhelp.add(submitRequestTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
-
-        getContentPane().add(Managerhelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 470));
-
-        ManagerGraphs.setBackground(new java.awt.Color(153, 51, 51));
-        ManagerGraphs.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        helpTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        helpTitle.setText("Graphs");
-        ManagerGraphs.add(helpTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
-
-        getContentPane().add(ManagerGraphs, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 470));
-
         bindingGroup.bind();
 
         pack();
@@ -370,7 +561,7 @@ public class Manager extends javax.swing.JFrame {
     private void StatusButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StatusButtonMouseClicked
       jPanel1.removeAll();
         jPanel1.revalidate();
-        jPanel1.add(Managerstatus);
+        jPanel1.add(ManagerStatus);
         jPanel1.repaint();
         jPanel1.revalidate();
     }//GEN-LAST:event_StatusButtonMouseClicked
@@ -394,10 +585,14 @@ public class Manager extends javax.swing.JFrame {
     private void helpButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpButton1MouseClicked
         jPanel1.removeAll();
         jPanel1.revalidate();
-        jPanel1.add(Managerhelp);
+        jPanel1.add(ManagerHelp);
         jPanel1.repaint();
         jPanel1.revalidate();
     }//GEN-LAST:event_helpButton1MouseClicked
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -437,29 +632,66 @@ public class Manager extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
+    private javax.swing.JLabel Backgroundlabel;
     private javax.swing.JLabel Graphbutton;
     private javax.swing.JLabel ID;
     private javax.swing.JLabel LogfilesButton;
     private javax.swing.JButton Logout;
     private javax.swing.JPanel ManagerGraphs;
+    private javax.swing.JPanel ManagerHelp;
     private javax.swing.JPanel ManagerHome;
     private javax.swing.JPanel ManagerLogfiles;
     private javax.swing.JPanel ManagerSearch;
-    private javax.swing.JPanel Managerhelp;
-    private javax.swing.JPanel Managerstatus;
+    private javax.swing.JPanel ManagerStatus;
     private javax.swing.JLabel Name;
-    private javax.swing.JLabel SearchTitle;
     private javax.swing.JLabel StatusButton;
-    private javax.swing.JLabel addBaggageTitle;
     private javax.swing.JLabel helpButton1;
-    private javax.swing.JLabel helpTitle;
     private javax.swing.JLabel helpTitle1;
+    private javax.swing.JLabel helpTitle6;
     private javax.swing.JLabel homeButton;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox10;
+    private javax.swing.JCheckBox jCheckBox11;
+    private javax.swing.JCheckBox jCheckBox2;
+    private javax.swing.JCheckBox jCheckBox3;
+    private javax.swing.JCheckBox jCheckBox4;
+    private javax.swing.JCheckBox jCheckBox6;
+    private javax.swing.JCheckBox jCheckBox7;
+    private javax.swing.JCheckBox jCheckBox8;
+    private javax.swing.JCheckBox jCheckBox9;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JList jList1;
+    private javax.swing.JList jList2;
+    private javax.swing.JList jList3;
+    private javax.swing.JList jList4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
     private javax.swing.JPanel menu;
     private javax.swing.JLabel searchButton;
-    private javax.swing.JLabel submitRequestTitle;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 
