@@ -1,7 +1,7 @@
-package Manager;
+package view;
 
 
-import Manager.NIKS5;
+import view.NIKS5;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
