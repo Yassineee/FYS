@@ -5,9 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import model.Category;
-import model.Klant;
-import model.Product;
+import model.Account;
 
 public class QueryManager {
 
@@ -31,13 +29,13 @@ public class QueryManager {
         return categoryName;
     }
 
-    public List<Category> getCategories() {
-        List<Category> categories = new ArrayList<Category>();
+    public List<Account> getCategories() {
+        List<Account> categories = new ArrayList<Account>();
         try {
             String sql = "SELECT * FROM categorie ORDER BY naam ASC";
             ResultSet result = dbmanager.doQuery(sql);
             while (result.next()) {
-                Category category = new Category(result.getInt("categorie_id"),
+                Account category = new Account(result.getInt("klant_id"),
                         result.getString("naam"),
                         result.getString("omschrijving"));
                 categories.add(category);
@@ -106,13 +104,13 @@ public class QueryManager {
         }
     }
 
-  public Klant getKlant(int klantId) {
-        Klant klant = new Klant();
+  public Account getKlant(int klantId) {
+        Account klant = new Account();
         try {
             String sql = "SELECT * FROM klant WHERE klant_id='" + klantId + "'";
             ResultSet result = dbmanager.doQuery(sql);
             if (result.next()) {
-                klant = new Klant(result.getInt("klant_id"),
+                klant = new Account(result.getInt("klant_id"),
                         result.getString("naam_id"),
                         result.getString("postcode"),
                         result.getString("adres"),

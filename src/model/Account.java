@@ -1,33 +1,37 @@
 package model;
 
-public class Klant {
+public class Account {
 
-    private int categoryId;
+    private int accountId;
     private String name;
-    private String description;
+    private String username;
+    private String password;
+    private String function;
 
-    public Klant() {
-        this(-1, "", "");
+    public Account() {
+        this(-1, "", "", "", "");
     }
 
-    public Klant(int klant_id, String name, String description) {
-        this.categoryId = klant_id;
+    public Account(int account_id, String name, String username, String password, String function) {
+        this.accountId = account_id;
         this.name = name;
-        this.description = description;
+        this.username = username;
+        this.password = password;
+        this.function = function;
     }
 
     /**
      * @return the categoryId
      */
-    public int getCategoryId() {
-        return categoryId;
+    public int getAccountId() {
+        return accountId;
     }
 
     /**
-     * @param categoryId the categoryId to set
+     * @param accountId the accountId to set
      */
-    public void setCategoryId(int categoryId) {
-        this.categoryId = categoryId;
+    public void setAccountId(int accountId) {
+        this.accountId = accountId;
     }
 
     /**
