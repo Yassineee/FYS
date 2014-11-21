@@ -5,7 +5,7 @@
  */
 package View;
 
-import java.awt.Color;
+import java.awt.*;
 
 /**
  *
@@ -17,6 +17,11 @@ public class Adminhome extends javax.swing.JFrame {
      * Creates new form AdminHome
      */
     public Adminhome() {
+        super("Lost Baggage");
+        setSize(1300,650);
+        setResizable(false);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setVisible(true);
         initComponents();
     }
 

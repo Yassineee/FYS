@@ -21,6 +21,11 @@ public class Employee extends javax.swing.JFrame {
      * Creates new form Employee
      */
     public Employee() {
+        super("Lost Baggage");
+        setSize(1300,650);
+        setResizable(false);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setVisible(true);
         initComponents();
     }
 
