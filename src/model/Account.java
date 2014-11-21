@@ -6,13 +6,13 @@ public class Account {
     private String name;
     private String username;
     private String password;
-    private String function;
+    private int function;
 
     public Account() {
-        this(-1, "", "", "", "");
+        this(-1, "", "", "", -1);
     }
 
-    public Account(int account_id, String name, String username, String password, String function) {
+    public Account(int account_id, String name, String username, String password, int function) {
         this.accountId = account_id;
         this.name = name;
         this.username = username;
@@ -49,16 +49,38 @@ public class Account {
     }
 
     /**
-     * @return the description
+     * @return the username
      */
-    public String getDescription() {
-        return description;
+    public String getUsername() {
+        return username;
     }
 
     /**
-     * @param description the description to set
+     * @param username the username to set
      */
-    public void setDescription(String description) {
-        this.description = description;
+    public void setUsername(String username) {
+        this.username = username;
+    }
+    
+    public String getPassword() {
+        return password;
+    }
+
+    /**
+     * @param password the password to set
+     */
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    
+    public int getFunction() {
+        return function;
+    }
+
+    /**
+     * @param function the function to set
+     */
+    public void setFunction(int function) {
+        this.function = function;
     }
 }
