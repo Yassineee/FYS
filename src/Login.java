@@ -1,6 +1,5 @@
-
-
-
+import javax.swing.JOptionPane;
+import view.*;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -34,9 +33,9 @@ public class Login extends javax.swing.JFrame {
         Mini = new javax.swing.JLabel();
         Exit = new javax.swing.JLabel();
         DragFrame = new javax.swing.JLabel();
-        Username = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        Login = new javax.swing.JLabel();
+        username = new javax.swing.JTextField();
+        password = new javax.swing.JPasswordField();
+        jLabel1 = new javax.swing.JLabel();
         Achtergrond = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -71,30 +70,42 @@ public class Login extends javax.swing.JFrame {
         });
         getContentPane().add(DragFrame, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 30));
 
-        Username.setBackground(new java.awt.Color(111, 13, 17));
-        Username.setForeground(new java.awt.Color(250, 250, 250));
-        Username.setText("Username");
-        Username.setBorder(null);
-        Username.addActionListener(new java.awt.event.ActionListener() {
+        username.setBackground(new java.awt.Color(111, 13, 17));
+        username.setForeground(new java.awt.Color(250, 250, 250));
+        username.setText("Username");
+        username.setBorder(null);
+        username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                UsernameActionPerformed(evt);
+                usernameActionPerformed(evt);
             }
         });
-        getContentPane().add(Username, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 152, 250, 20));
+        getContentPane().add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 152, 250, 20));
 
-        jPasswordField1.setBackground(new java.awt.Color(111, 13, 17));
-        jPasswordField1.setForeground(new java.awt.Color(250, 250, 250));
-        jPasswordField1.setText("jPasswordField1");
-        jPasswordField1.setBorder(null);
-        getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 200, 250, 20));
+        password.setBackground(new java.awt.Color(111, 13, 17));
+        password.setForeground(new java.awt.Color(250, 250, 250));
+        password.setText("jPasswordField1");
+        password.setBorder(null);
+        getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 200, 250, 20));
 
-        Login.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Login.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel1.setBackground(new java.awt.Color(179, 15, 22));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(250, 250, 250));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("LOGIN");
+        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel1.setOpaque(true);
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                LoginMouseClicked(evt);
+                jLabel1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel1MouseExited(evt);
             }
         });
-        getContentPane().add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 234, 40, 20));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(284, 230, 70, 30));
 
         Achtergrond.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/LoginScherm2.png"))); // NOI18N
 
@@ -108,9 +119,9 @@ public class Login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void UsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsernameActionPerformed
+    private void usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_UsernameActionPerformed
+    }//GEN-LAST:event_usernameActionPerformed
 
     private void ExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitMouseClicked
         System.exit(0);
@@ -132,11 +143,42 @@ public class Login extends javax.swing.JFrame {
         this.setLocation(x - xMouse, y - yMouse);
     }//GEN-LAST:event_DragFrameMouseDragged
 
-    private void LoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginMouseClicked
+    private void jLabel1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseEntered
+        jLabel1.setBackground(new java.awt.Color(229,65,72));
+    }//GEN-LAST:event_jLabel1MouseEntered
 
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_LoginMouseClicked
+    private void jLabel1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseExited
+        jLabel1.setBackground(new java.awt.Color(179,15,22));
+    }//GEN-LAST:event_jLabel1MouseExited
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        if (null != username.getText()) {
+            switch (username.getText()) {
+                case "Employee1":
+                    if ("Employee1".equals(password.getText())) {
+                        Employee Employee = new Employee();
+                        this.dispose();
+                    }
+                    break;
+                case "Manager1":
+                    if ("Manager1".equals(password.getText())) {
+                        Manager Manager = new Manager();
+                        this.dispose();
+                    }
+                    break;
+                case "Admin1":
+                    if ("Admin1".equals(password.getText())) {
+                        Admin Admin = new Admin();
+                        this.dispose();
+                    }
+                    break;
+                default:
+                    JOptionPane.showMessageDialog(this, "Invalid Username or Password!");
+                    break;
+            }
+        }
+    
+    }//GEN-LAST:event_jLabel1MouseClicked
                                       
     /**
      * @param args the command line arguments
@@ -177,10 +219,10 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel Achtergrond;
     private javax.swing.JLabel DragFrame;
     private javax.swing.JLabel Exit;
-    private javax.swing.JLabel Login;
     private javax.swing.JLabel Mini;
-    private javax.swing.JTextField Username;
-    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPasswordField password;
+    private javax.swing.JTextField username;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }

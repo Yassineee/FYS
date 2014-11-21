@@ -21,6 +21,11 @@ public class Manager extends javax.swing.JFrame {
      * Creates new form Employee
      */
     public Manager() {
+        super("Lost Baggage");
+        setSize(1300,650);
+        setResizable(false);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setVisible(true);
         initComponents();
     }
 
@@ -36,17 +41,16 @@ public class Manager extends javax.swing.JFrame {
 
         Name = new javax.swing.JLabel();
         ID = new javax.swing.JLabel();
-        Logout = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         ManagerHome = new javax.swing.JPanel();
-        helpTitle1 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        welcomeText = new javax.swing.JLabel();
+        naamText = new javax.swing.JLabel();
+        accountTypeNaam = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        IDText = new javax.swing.JLabel();
+        nameBar = new javax.swing.JTextField();
+        accountType = new javax.swing.JTextField();
+        idBar = new javax.swing.JTextField();
         Backgroundlabel = new javax.swing.JLabel();
         ManagerSearch = new javax.swing.JPanel();
         jTextField4 = new javax.swing.JTextField();
@@ -94,6 +98,7 @@ public class Manager extends javax.swing.JFrame {
         LogfilesButton = new javax.swing.JLabel();
         Graphbutton = new javax.swing.JLabel();
         helpButton1 = new javax.swing.JLabel();
+        logoutKnop = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -109,19 +114,6 @@ public class Manager extends javax.swing.JFrame {
         ID.setText("Employee ID:");
         getContentPane().add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 90, 130, 40));
 
-        Logout.setBackground(new java.awt.Color(151, 51, 51));
-        Logout.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Logout.setText("Logout");
-        Logout.setToolTipText("blablabla");
-        Logout.setBorder(null);
-        Logout.setBorderPainted(false);
-        Logout.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LogoutActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 90, 70, 30));
-
         jPanel1.setBackground(new java.awt.Color(153, 51, 51));
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
         jPanel1.setForeground(new java.awt.Color(153, 51, 51));
@@ -131,41 +123,39 @@ public class Manager extends javax.swing.JFrame {
         ManagerHome.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
         ManagerHome.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        helpTitle1.setFont(new java.awt.Font("Tahoma", 2, 24)); // NOI18N
-        helpTitle1.setText("Welcome Manager,");
-        ManagerHome.add(helpTitle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 140, -1, -1));
+        welcomeText.setFont(new java.awt.Font("Tahoma", 2, 24)); // NOI18N
+        welcomeText.setText("Welcome Manager,");
+        ManagerHome.add(welcomeText, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 140, -1, -1));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel1.setText("Name: ");
-        ManagerHome.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 250, 50, 20));
+        naamText.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        naamText.setText("Name: ");
+        ManagerHome.add(naamText, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 250, 50, 20));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel2.setText("Account type:");
-        ManagerHome.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, 110, 30));
-
-        jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\Yassinee\\Downloads\\CorendonLogo.png")); // NOI18N
+        accountTypeNaam.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        accountTypeNaam.setText("Account type:");
+        ManagerHome.add(accountTypeNaam, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, 110, 30));
         ManagerHome.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, 200, 80));
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel8.setText("ID:");
-        ManagerHome.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, 50, 20));
+        IDText.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        IDText.setText("ID:");
+        ManagerHome.add(IDText, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, 50, 20));
 
-        jTextField1.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
-        jTextField1.setText("Example: John");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        nameBar.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
+        nameBar.setText("Example: John");
+        nameBar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                nameBarActionPerformed(evt);
             }
         });
-        ManagerHome.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 260, 100, -1));
+        ManagerHome.add(nameBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 260, 100, -1));
 
-        jTextField2.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
-        jTextField2.setText("Example: Manager");
-        ManagerHome.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 300, 100, -1));
+        accountType.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
+        accountType.setText("Example: Manager");
+        ManagerHome.add(accountType, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 300, 100, -1));
 
-        jTextField3.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
-        jTextField3.setText("Example: 3");
-        ManagerHome.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 220, 100, -1));
+        idBar.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
+        idBar.setText("Example: 3");
+        ManagerHome.add(idBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 220, 100, -1));
 
         Backgroundlabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/00000001.JPG"))); // NOI18N
         Backgroundlabel.setToolTipText("");
@@ -454,10 +444,7 @@ public class Manager extends javax.swing.JFrame {
             .addComponent(StatusButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(LogfilesButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(Graphbutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menuLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(helpButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(helpButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         menuLayout.setVerticalGroup(
             menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -469,14 +456,29 @@ public class Manager extends javax.swing.JFrame {
                 .addComponent(StatusButton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1)
                 .addComponent(LogfilesButton, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(1, 1, 1)
                 .addComponent(Graphbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(helpButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 84, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
-        getContentPane().add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 180, 178, 410));
+        getContentPane().add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 180, 178, 320));
+
+        logoutKnop.setBackground(new java.awt.Color(147, 51, 51));
+        logoutKnop.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        logoutKnop.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        logoutKnop.setText("LOGOUT");
+        logoutKnop.setOpaque(true);
+        logoutKnop.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                logoutKnopMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                logoutKnopMouseExited(evt);
+            }
+        });
+        getContentPane().add(logoutKnop, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 89, 90, 33));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/layoutCorendonFinalVeranderd.png"))); // NOI18N
 
@@ -489,10 +491,6 @@ public class Manager extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void LogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoutActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_LogoutActionPerformed
 
     private void homeButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButtonMouseEntered
         homeButton.setBackground(Color.lightGray);
@@ -590,9 +588,17 @@ public class Manager extends javax.swing.JFrame {
         jPanel1.revalidate();
     }//GEN-LAST:event_helpButton1MouseClicked
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void nameBarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameBarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_nameBarActionPerformed
+
+    private void logoutKnopMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutKnopMouseEntered
+        logoutKnop.setBackground(new java.awt.Color(224,90,90));
+    }//GEN-LAST:event_logoutKnopMouseEntered
+
+    private void logoutKnopMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutKnopMouseExited
+        logoutKnop.setBackground(new java.awt.Color(153,51,51));
+    }//GEN-LAST:event_logoutKnopMouseExited
 
     /**
      * @param args the command line arguments
@@ -635,8 +641,8 @@ public class Manager extends javax.swing.JFrame {
     private javax.swing.JLabel Backgroundlabel;
     private javax.swing.JLabel Graphbutton;
     private javax.swing.JLabel ID;
+    private javax.swing.JLabel IDText;
     private javax.swing.JLabel LogfilesButton;
-    private javax.swing.JButton Logout;
     private javax.swing.JPanel ManagerGraphs;
     private javax.swing.JPanel ManagerHelp;
     private javax.swing.JPanel ManagerHome;
@@ -645,10 +651,12 @@ public class Manager extends javax.swing.JFrame {
     private javax.swing.JPanel ManagerStatus;
     private javax.swing.JLabel Name;
     private javax.swing.JLabel StatusButton;
+    private javax.swing.JTextField accountType;
+    private javax.swing.JLabel accountTypeNaam;
     private javax.swing.JLabel helpButton1;
-    private javax.swing.JLabel helpTitle1;
     private javax.swing.JLabel helpTitle6;
     private javax.swing.JLabel homeButton;
+    private javax.swing.JTextField idBar;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox10;
     private javax.swing.JCheckBox jCheckBox11;
@@ -659,7 +667,6 @@ public class Manager extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox7;
     private javax.swing.JCheckBox jCheckBox8;
     private javax.swing.JCheckBox jCheckBox9;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -667,13 +674,11 @@ public class Manager extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JList jList1;
     private javax.swing.JList jList2;
@@ -684,14 +689,15 @@ public class Manager extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
+    private javax.swing.JLabel logoutKnop;
     private javax.swing.JPanel menu;
+    private javax.swing.JLabel naamText;
+    private javax.swing.JTextField nameBar;
     private javax.swing.JLabel searchButton;
+    private javax.swing.JLabel welcomeText;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 

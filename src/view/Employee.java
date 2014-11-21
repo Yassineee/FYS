@@ -21,6 +21,11 @@ public class Employee extends javax.swing.JFrame {
      * Creates new form Employee
      */
     public Employee() {
+        super("Lost Baggage");
+        setSize(1300,650);
+        setResizable(false);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setVisible(true);
         initComponents();
     }
 
@@ -36,7 +41,6 @@ public class Employee extends javax.swing.JFrame {
 
         Name = new javax.swing.JLabel();
         ID = new javax.swing.JLabel();
-        Logout = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         employeeHome = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -47,6 +51,7 @@ public class Employee extends javax.swing.JFrame {
         addBaggageButton = new javax.swing.JLabel();
         submitBaggageButton = new javax.swing.JLabel();
         helpButton = new javax.swing.JLabel();
+        logoutKnop = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
         employeeAddBaggage = new javax.swing.JPanel();
         addBaggageTitle = new javax.swing.JLabel();
@@ -69,19 +74,6 @@ public class Employee extends javax.swing.JFrame {
         ID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         ID.setText("Employee ID:");
         getContentPane().add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 90, 130, 40));
-
-        Logout.setBackground(new java.awt.Color(151, 51, 51));
-        Logout.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Logout.setText("Logout");
-        Logout.setToolTipText("blablabla");
-        Logout.setBorder(null);
-        Logout.setBorderPainted(false);
-        Logout.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LogoutActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 90, 70, 30));
 
         jPanel1.setBackground(new java.awt.Color(153, 51, 51));
         jPanel1.setLayout(new java.awt.BorderLayout());
@@ -219,6 +211,21 @@ public class Employee extends javax.swing.JFrame {
 
         getContentPane().add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 180, 178, 410));
 
+        logoutKnop.setBackground(new java.awt.Color(147, 51, 51));
+        logoutKnop.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        logoutKnop.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        logoutKnop.setText("LOGOUT");
+        logoutKnop.setOpaque(true);
+        logoutKnop.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                logoutKnopMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                logoutKnopMouseExited(evt);
+            }
+        });
+        getContentPane().add(logoutKnop, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 89, 90, 33));
+
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/layoutCorendonFinalVeranderd.png"))); // NOI18N
 
         org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, Background, org.jdesktop.beansbinding.ELProperty.create("${background}"), Background, org.jdesktop.beansbinding.BeanProperty.create("background"));
@@ -266,10 +273,6 @@ public class Employee extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void LogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoutActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_LogoutActionPerformed
 
     private void homeButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButtonMouseEntered
         homeButton.setBackground(Color.lightGray);
@@ -351,6 +354,14 @@ public class Employee extends javax.swing.JFrame {
         jPanel1.revalidate();
     }//GEN-LAST:event_helpButtonMouseClicked
 
+    private void logoutKnopMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutKnopMouseEntered
+        logoutKnop.setBackground(new java.awt.Color(224,90,90));
+    }//GEN-LAST:event_logoutKnopMouseEntered
+
+    private void logoutKnopMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutKnopMouseExited
+        logoutKnop.setBackground(new java.awt.Color(153,51,51));
+    }//GEN-LAST:event_logoutKnopMouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -389,7 +400,6 @@ public class Employee extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
     private javax.swing.JLabel ID;
-    private javax.swing.JButton Logout;
     private javax.swing.JLabel Name;
     private javax.swing.JLabel SearchTitle;
     private javax.swing.JLabel addBaggageButton;
@@ -405,6 +415,7 @@ public class Employee extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel logoutKnop;
     private javax.swing.JPanel menu;
     private javax.swing.JLabel searchButton;
     private javax.swing.JLabel submitBaggageButton;

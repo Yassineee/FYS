@@ -21,6 +21,11 @@ public class Admin extends javax.swing.JFrame {
      * Creates new form Employee
      */
     public Admin() {
+        super("Lost Baggage");
+        setSize(1300,650);
+        setResizable(false);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setVisible(true);
         initComponents();
     }
 
@@ -36,7 +41,6 @@ public class Admin extends javax.swing.JFrame {
 
         Name = new javax.swing.JLabel();
         ID = new javax.swing.JLabel();
-        Logout = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         AdminHome = new javax.swing.JPanel();
         helpTitle1 = new javax.swing.JLabel();
@@ -49,34 +53,34 @@ public class Admin extends javax.swing.JFrame {
         jTextField3 = new javax.swing.JTextField();
         Backgroundlabel = new javax.swing.JLabel();
         AdminEdit = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
-        jLabel23 = new javax.swing.JLabel();
-        jTextField13 = new javax.swing.JTextField();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        jTextField15 = new javax.swing.JTextField();
-        jTextField16 = new javax.swing.JTextField();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
-        jTextField17 = new javax.swing.JTextField();
-        jLabel29 = new javax.swing.JLabel();
-        jLabel30 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
-        jComboBox5 = new javax.swing.JComboBox();
-        jLabel3 = new javax.swing.JLabel();
+        corendonTitleEdit = new javax.swing.JLabel();
+        zipEdit = new javax.swing.JLabel();
+        countryEdit = new javax.swing.JLabel();
+        addressEdit = new javax.swing.JLabel();
+        cityEdit = new javax.swing.JLabel();
+        nameEdit = new javax.swing.JLabel();
+        emailEdit = new javax.swing.JLabel();
+        addressFieldEdit = new javax.swing.JTextField();
+        cityFieldEdit = new javax.swing.JTextField();
+        zipFieldEdit = new javax.swing.JTextField();
+        emailFieldEdit = new javax.swing.JTextField();
+        nameFieldEdit = new javax.swing.JTextField();
+        countryFieldEdit = new javax.swing.JTextField();
+        accountInfoTitleEdit = new javax.swing.JLabel();
+        repeatwwFieldEdit = new javax.swing.JTextField();
+        accountypeEdit = new javax.swing.JLabel();
+        repeatwwEdit = new javax.swing.JLabel();
+        newwwEdit = new javax.swing.JLabel();
+        newwwFieldEdit = new javax.swing.JTextField();
+        oldwwFieldEdit = new javax.swing.JTextField();
+        oldwwEdit = new javax.swing.JLabel();
+        newusernameEdit = new javax.swing.JLabel();
+        newusernameFieldEdit = new javax.swing.JTextField();
+        accountEdit = new javax.swing.JLabel();
+        PersonalInfoTitleEdit = new javax.swing.JLabel();
+        accountDropboxEdit = new javax.swing.JComboBox();
+        accounttypeDropboxEdit = new javax.swing.JComboBox();
+        background = new javax.swing.JLabel();
         AdminCreate = new javax.swing.JPanel();
         jLabel31 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
@@ -136,6 +140,7 @@ public class Admin extends javax.swing.JFrame {
         createButton = new javax.swing.JLabel();
         deleteButton = new javax.swing.JLabel();
         helpButton = new javax.swing.JLabel();
+        logoutKnop = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -150,19 +155,6 @@ public class Admin extends javax.swing.JFrame {
         ID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         ID.setText("Employee ID:");
         getContentPane().add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 90, 130, 40));
-
-        Logout.setBackground(new java.awt.Color(151, 51, 51));
-        Logout.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Logout.setText("Logout");
-        Logout.setToolTipText("blablabla");
-        Logout.setBorder(null);
-        Logout.setBorderPainted(false);
-        Logout.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LogoutActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 90, 70, 30));
 
         jPanel1.setBackground(new java.awt.Color(153, 51, 51));
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
@@ -184,8 +176,6 @@ public class Admin extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("Account type:");
         AdminHome.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, 110, 30));
-
-        jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\Yassinee\\Downloads\\CorendonLogo.png")); // NOI18N
         AdminHome.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, 200, 80));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -218,111 +208,111 @@ public class Admin extends javax.swing.JFrame {
         AdminEdit.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
         AdminEdit.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/corendon-airlines.jpg"))); // NOI18N
-        jLabel11.setText("jLabel11");
-        AdminEdit.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 30, 300, 70));
+        corendonTitleEdit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/corendon-airlines.jpg"))); // NOI18N
+        corendonTitleEdit.setText("jLabel11");
+        AdminEdit.add(corendonTitleEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 30, 300, 70));
 
-        jLabel17.setText("Zip/Postal code   :");
-        AdminEdit.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 240, 90, 20));
+        zipEdit.setText("Zip/Postal code   :");
+        AdminEdit.add(zipEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 240, 90, 20));
 
-        jLabel18.setText("Country    :");
-        AdminEdit.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 270, 70, 20));
+        countryEdit.setText("Country    :");
+        AdminEdit.add(countryEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 270, 70, 20));
 
-        jLabel19.setText("Address   :");
-        AdminEdit.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 180, 60, 20));
+        addressEdit.setText("Address   :");
+        AdminEdit.add(addressEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 180, 60, 20));
 
-        jLabel20.setText("City     :");
-        AdminEdit.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 210, -1, -1));
+        cityEdit.setText("City     :");
+        AdminEdit.add(cityEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 210, -1, -1));
 
-        jLabel21.setText("Name   :");
-        AdminEdit.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 150, -1, 20));
+        nameEdit.setText("Name   :");
+        AdminEdit.add(nameEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 150, -1, 20));
 
-        jLabel22.setText("Email     :");
-        AdminEdit.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 300, -1, -1));
+        emailEdit.setText("Email     :");
+        AdminEdit.add(emailEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 300, -1, -1));
 
-        jTextField7.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
-        jTextField7.setText("Example: Egidiusstraat");
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        addressFieldEdit.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
+        addressFieldEdit.setText("Example: Egidiusstraat");
+        addressFieldEdit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                addressFieldEditActionPerformed(evt);
             }
         });
-        AdminEdit.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 180, 240, -1));
+        AdminEdit.add(addressFieldEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 180, 240, -1));
 
-        jTextField8.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
-        jTextField8.setText("Example: Amsterdam");
-        AdminEdit.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 210, 240, -1));
+        cityFieldEdit.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
+        cityFieldEdit.setText("Example: Amsterdam");
+        AdminEdit.add(cityFieldEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 210, 240, -1));
 
-        jTextField9.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
-        jTextField9.setText("Example: 1055GK");
-        AdminEdit.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 240, 240, -1));
+        zipFieldEdit.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
+        zipFieldEdit.setText("Example: 1055GK");
+        AdminEdit.add(zipFieldEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 240, 240, -1));
 
-        jTextField10.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
-        jTextField10.setText("Example: John@corendon.com");
-        AdminEdit.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 300, 240, -1));
+        emailFieldEdit.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
+        emailFieldEdit.setText("Example: John@corendon.com");
+        AdminEdit.add(emailFieldEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 300, 240, -1));
 
-        jTextField11.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
-        jTextField11.setText("example: john");
-        AdminEdit.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, 240, -1));
+        nameFieldEdit.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
+        nameFieldEdit.setText("example: john");
+        AdminEdit.add(nameFieldEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, 240, -1));
 
-        jTextField12.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
-        jTextField12.setText("Example: The Netherlands");
-        AdminEdit.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 270, 240, -1));
+        countryFieldEdit.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
+        countryFieldEdit.setText("Example: The Netherlands");
+        AdminEdit.add(countryFieldEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 270, 240, -1));
 
-        jLabel23.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel23.setText("Account information:");
-        AdminEdit.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 110, -1, -1));
+        accountInfoTitleEdit.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        accountInfoTitleEdit.setText("Account information:");
+        AdminEdit.add(accountInfoTitleEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 110, -1, -1));
 
-        jTextField13.setText("***********");
-        AdminEdit.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 270, 240, -1));
+        repeatwwFieldEdit.setText("***********");
+        AdminEdit.add(repeatwwFieldEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 270, 240, -1));
 
-        jLabel24.setText("Account type     :");
-        AdminEdit.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 100, -1));
+        accountypeEdit.setText("Account type     :");
+        AdminEdit.add(accountypeEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 100, -1));
 
-        jLabel25.setText(" repeat password  :");
-        AdminEdit.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 100, 20));
+        repeatwwEdit.setText(" repeat password  :");
+        AdminEdit.add(repeatwwEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 100, 20));
 
-        jLabel26.setText("New Password   :");
-        AdminEdit.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 90, 20));
+        newwwEdit.setText("New Password   :");
+        AdminEdit.add(newwwEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 90, 20));
 
-        jTextField15.setText("***********");
-        AdminEdit.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, 240, -1));
+        newwwFieldEdit.setText("***********");
+        AdminEdit.add(newwwFieldEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, 240, -1));
 
-        jTextField16.setText("***********");
-        AdminEdit.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 240, -1));
+        oldwwFieldEdit.setText("***********");
+        AdminEdit.add(oldwwFieldEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 240, -1));
 
-        jLabel27.setText("Old Password  :");
-        AdminEdit.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, -1, -1));
+        oldwwEdit.setText("Old Password  :");
+        AdminEdit.add(oldwwEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, -1, -1));
 
-        jLabel28.setText("New Username :");
-        AdminEdit.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, 100, 20));
+        newusernameEdit.setText("New Username :");
+        AdminEdit.add(newusernameEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, 100, 20));
 
-        jTextField17.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
-        jTextField17.setText("Example: Administrator1988");
-        AdminEdit.add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 180, 240, -1));
+        newusernameFieldEdit.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
+        newusernameFieldEdit.setText("Example: Administrator1988");
+        AdminEdit.add(newusernameFieldEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 180, 240, -1));
 
-        jLabel29.setText("Account:");
-        AdminEdit.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 150, -1, 20));
+        accountEdit.setText("Account:");
+        AdminEdit.add(accountEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 150, -1, 20));
 
-        jLabel30.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel30.setText("Personal information:");
-        AdminEdit.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 110, -1, -1));
+        PersonalInfoTitleEdit.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        PersonalInfoTitleEdit.setText("Personal information:");
+        AdminEdit.add(PersonalInfoTitleEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 110, -1, -1));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Account1", "Account1", "Account1", "Account1", "Account1", "Account1" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        accountDropboxEdit.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Account1", "Account1", "Account1", "Account1", "Account1", "Account1" }));
+        accountDropboxEdit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                accountDropboxEditActionPerformed(evt);
             }
         });
-        AdminEdit.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, 240, -1));
+        AdminEdit.add(accountDropboxEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, 240, -1));
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Manager", "Administrator", "Employee" }));
-        AdminEdit.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 300, 240, -1));
+        accounttypeDropboxEdit.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Manager", "Administrator", "Employee" }));
+        AdminEdit.add(accounttypeDropboxEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 300, 240, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/00000001.JPG"))); // NOI18N
-        jLabel3.setToolTipText("");
-        jLabel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        AdminEdit.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 450));
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/00000001.JPG"))); // NOI18N
+        background.setToolTipText("");
+        background.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        AdminEdit.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 450));
 
         AdminHome.add(AdminEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -664,6 +654,21 @@ public class Admin extends javax.swing.JFrame {
 
         getContentPane().add(menu1, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 180, 178, 410));
 
+        logoutKnop.setBackground(new java.awt.Color(147, 51, 51));
+        logoutKnop.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        logoutKnop.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        logoutKnop.setText("LOGOUT");
+        logoutKnop.setOpaque(true);
+        logoutKnop.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                logoutKnopMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                logoutKnopMouseExited(evt);
+            }
+        });
+        getContentPane().add(logoutKnop, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 89, 90, 33));
+
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/layoutCorendonFinalVeranderd.png"))); // NOI18N
 
         org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, Background, org.jdesktop.beansbinding.ELProperty.create("${background}"), Background, org.jdesktop.beansbinding.BeanProperty.create("background"));
@@ -676,10 +681,6 @@ public class Admin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void LogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoutActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_LogoutActionPerformed
-
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
@@ -687,7 +688,7 @@ public class Admin extends javax.swing.JFrame {
     private void homeButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButton1MouseClicked
         jPanel1.removeAll();
         jPanel1.revalidate();
-        jPanel1.add(homeButton1);
+        jPanel1.add(AdminHome);
         jPanel1.repaint();
         jPanel1.revalidate();
     }//GEN-LAST:event_homeButton1MouseClicked
@@ -764,9 +765,9 @@ public class Admin extends javax.swing.JFrame {
         helpButton.setBackground(Color.white);
     }//GEN-LAST:event_helpButtonMouseExited
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void addressFieldEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addressFieldEditActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_addressFieldEditActionPerformed
 
     private void jTextField18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField18ActionPerformed
         // TODO add your handling code here:
@@ -784,9 +785,17 @@ public class Admin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField35ActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void accountDropboxEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_accountDropboxEditActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_accountDropboxEditActionPerformed
+
+    private void logoutKnopMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutKnopMouseEntered
+        logoutKnop.setBackground(new java.awt.Color(224,90,90));
+    }//GEN-LAST:event_logoutKnopMouseEntered
+
+    private void logoutKnopMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutKnopMouseExited
+        logoutKnop.setBackground(new java.awt.Color(153,51,51));
+    }//GEN-LAST:event_logoutKnopMouseExited
 
     /**
      * @param args the command line arguments
@@ -839,39 +848,36 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JLabel Background;
     private javax.swing.JLabel Backgroundlabel;
     private javax.swing.JLabel ID;
-    private javax.swing.JButton Logout;
     private javax.swing.JLabel Name;
+    private javax.swing.JLabel PersonalInfoTitleEdit;
+    private javax.swing.JComboBox accountDropboxEdit;
+    private javax.swing.JLabel accountEdit;
+    private javax.swing.JLabel accountInfoTitleEdit;
+    private javax.swing.JComboBox accounttypeDropboxEdit;
+    private javax.swing.JLabel accountypeEdit;
+    private javax.swing.JLabel addressEdit;
+    private javax.swing.JTextField addressFieldEdit;
+    private javax.swing.JLabel background;
+    private javax.swing.JLabel cityEdit;
+    private javax.swing.JTextField cityFieldEdit;
+    private javax.swing.JLabel corendonTitleEdit;
+    private javax.swing.JLabel countryEdit;
+    private javax.swing.JTextField countryFieldEdit;
     private javax.swing.JLabel createButton;
     private javax.swing.JLabel deleteButton;
     private javax.swing.JLabel editButton;
+    private javax.swing.JLabel emailEdit;
+    private javax.swing.JTextField emailFieldEdit;
     private javax.swing.JLabel helpButton;
     private javax.swing.JLabel helpTitle1;
     private javax.swing.JLabel helpTitle6;
     private javax.swing.JLabel homeButton1;
-    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JComboBox jComboBox3;
     private javax.swing.JComboBox jComboBox4;
-    private javax.swing.JComboBox jComboBox5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
@@ -903,13 +909,6 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField17;
     private javax.swing.JTextField jTextField18;
     private javax.swing.JTextField jTextField19;
     private javax.swing.JTextField jTextField2;
@@ -930,10 +929,20 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField33;
     private javax.swing.JTextField jTextField34;
     private javax.swing.JTextField jTextField35;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JLabel logoutKnop;
     private javax.swing.JPanel menu1;
+    private javax.swing.JLabel nameEdit;
+    private javax.swing.JTextField nameFieldEdit;
+    private javax.swing.JLabel newusernameEdit;
+    private javax.swing.JTextField newusernameFieldEdit;
+    private javax.swing.JLabel newwwEdit;
+    private javax.swing.JTextField newwwFieldEdit;
+    private javax.swing.JLabel oldwwEdit;
+    private javax.swing.JTextField oldwwFieldEdit;
+    private javax.swing.JLabel repeatwwEdit;
+    private javax.swing.JTextField repeatwwFieldEdit;
+    private javax.swing.JLabel zipEdit;
+    private javax.swing.JTextField zipFieldEdit;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 
