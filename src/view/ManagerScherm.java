@@ -28,11 +28,11 @@ public class ManagerScherm extends javax.swing.JFrame {
     private void initComponents() {
 
         Name = new javax.swing.JLabel();
+        Status = new javax.swing.JPanel();
         HomeLabel = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         SearchLabel = new javax.swing.JPanel();
         GraphsLabel = new javax.swing.JPanel();
-        Status = new javax.swing.JPanel();
         LogfilesLabel = new javax.swing.JPanel();
         HelpLabel = new javax.swing.JPanel();
         menu = new javax.swing.JPanel();
@@ -41,6 +41,7 @@ public class ManagerScherm extends javax.swing.JFrame {
         searchbuttom = new javax.swing.JToggleButton();
         addBaggageButtom = new javax.swing.JToggleButton();
         submitRequestButtom = new javax.swing.JToggleButton();
+        helpButtom1 = new javax.swing.JToggleButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -50,6 +51,10 @@ public class ManagerScherm extends javax.swing.JFrame {
         Name.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Name.setText("Logged in as:");
         getContentPane().add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 140, 50));
+
+        Status.setBackground(new java.awt.Color(153, 51, 51));
+        Status.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(Status, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 890, 440));
 
         HomeLabel.setBackground(new java.awt.Color(153, 51, 51));
         HomeLabel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -70,10 +75,6 @@ public class ManagerScherm extends javax.swing.JFrame {
         GraphsLabel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(GraphsLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 890, 440));
 
-        Status.setBackground(new java.awt.Color(153, 51, 51));
-        Status.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(Status, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 890, 440));
-
         LogfilesLabel.setBackground(new java.awt.Color(153, 51, 51));
         LogfilesLabel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(LogfilesLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 890, 440));
@@ -86,7 +87,7 @@ public class ManagerScherm extends javax.swing.JFrame {
         menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         helpButtom.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        helpButtom.setText("Help");
+        helpButtom.setText("Log");
         helpButtom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 helpButtomActionPerformed(evt);
@@ -114,7 +115,7 @@ public class ManagerScherm extends javax.swing.JFrame {
         menu.add(searchbuttom, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 110, 40));
 
         addBaggageButtom.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        addBaggageButtom.setText("Add baggage");
+        addBaggageButtom.setText("Graphs");
         addBaggageButtom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addBaggageButtomActionPerformed(evt);
@@ -123,7 +124,7 @@ public class ManagerScherm extends javax.swing.JFrame {
         menu.add(addBaggageButtom, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 110, 40));
 
         submitRequestButtom.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        submitRequestButtom.setText("Submit Request");
+        submitRequestButtom.setText("Status");
         submitRequestButtom.setToolTipText("DIT IS EEN HOME KNOPP!!!!!!!!!!!!!!!!!!!!!!!!!!");
         submitRequestButtom.setAlignmentX(1.0F);
         submitRequestButtom.setAlignmentY(0.0F);
@@ -134,6 +135,15 @@ public class ManagerScherm extends javax.swing.JFrame {
         });
         menu.add(submitRequestButtom, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 110, 40));
 
+        helpButtom1.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        helpButtom1.setText("Help");
+        helpButtom1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                helpButtom1ActionPerformed(evt);
+            }
+        });
+        menu.add(helpButtom1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 110, 40));
+
         getContentPane().add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 150, 430));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/layoutCorendonFinalVeranderd.png"))); // NOI18N
@@ -142,25 +152,29 @@ public class ManagerScherm extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void helpButtom1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helpButtom1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_helpButtom1ActionPerformed
+
     private void helpButtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helpButtomActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_helpButtomActionPerformed
 
-    private void homeButtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeButtomActionPerformed
+    private void submitRequestButtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitRequestButtomActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_homeButtomActionPerformed
-
-    private void searchbuttomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchbuttomActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_searchbuttomActionPerformed
+    }//GEN-LAST:event_submitRequestButtomActionPerformed
 
     private void addBaggageButtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBaggageButtomActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_addBaggageButtomActionPerformed
 
-    private void submitRequestButtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitRequestButtomActionPerformed
+    private void searchbuttomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchbuttomActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_submitRequestButtomActionPerformed
+    }//GEN-LAST:event_searchbuttomActionPerformed
+
+    private void homeButtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeButtomActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_homeButtomActionPerformed
 
     /**
      * @param args the command line arguments
@@ -208,6 +222,7 @@ public class ManagerScherm extends javax.swing.JFrame {
     private javax.swing.JPanel Status;
     private javax.swing.JToggleButton addBaggageButtom;
     private javax.swing.JToggleButton helpButtom;
+    private javax.swing.JToggleButton helpButtom1;
     private javax.swing.JToggleButton homeButtom;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

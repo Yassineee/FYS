@@ -1,5 +1,6 @@
 package view;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 
@@ -48,11 +49,11 @@ public class Employee extends javax.swing.JFrame {
         employeeHelp = new javax.swing.JPanel();
         helpTitle = new javax.swing.JLabel();
         menu = new javax.swing.JPanel();
-        helpButtom = new javax.swing.JToggleButton();
-        addBaggageButtom = new javax.swing.JToggleButton();
-        submitRequestButtom = new javax.swing.JToggleButton();
-        employeeHomeButton = new javax.swing.JButton();
-        employeeSearchButton = new javax.swing.JButton();
+        homeButton = new javax.swing.JLabel();
+        searchButton = new javax.swing.JLabel();
+        addBaggageButton = new javax.swing.JLabel();
+        submitBaggageButton = new javax.swing.JLabel();
+        helpButton = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -133,49 +134,78 @@ public class Employee extends javax.swing.JFrame {
 
         menu.setBackground(new java.awt.Color(255, 255, 255));
 
-        helpButtom.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        helpButtom.setText("Help");
-        helpButtom.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                helpButtomActionPerformed(evt);
+        homeButton.setBackground(new java.awt.Color(255, 255, 255));
+        homeButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        homeButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        homeButton.setText("Home");
+        homeButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        homeButton.setOpaque(true);
+        homeButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                homeButtonMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                homeButtonMouseExited(evt);
             }
         });
 
-        addBaggageButtom.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        addBaggageButtom.setText("Add baggage");
-        addBaggageButtom.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addBaggageButtomActionPerformed(evt);
+        searchButton.setBackground(new java.awt.Color(255, 255, 255));
+        searchButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        searchButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        searchButton.setText("Search");
+        searchButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        searchButton.setOpaque(true);
+        searchButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                searchButtonMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                searchButtonMouseExited(evt);
             }
         });
 
-        submitRequestButtom.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        submitRequestButtom.setText("Submit Request");
-        submitRequestButtom.setToolTipText("DIT IS EEN HOME KNOPP!!!!!!!!!!!!!!!!!!!!!!!!!!");
-        submitRequestButtom.setAlignmentX(1.0F);
-        submitRequestButtom.setAlignmentY(0.0F);
-        submitRequestButtom.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitRequestButtomActionPerformed(evt);
+        addBaggageButton.setBackground(new java.awt.Color(255, 255, 255));
+        addBaggageButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        addBaggageButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        addBaggageButton.setText("Add baggage");
+        addBaggageButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        addBaggageButton.setOpaque(true);
+        addBaggageButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                addBaggageButtonMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                addBaggageButtonMouseExited(evt);
             }
         });
 
-        employeeHomeButton.setText("Home");
-        employeeHomeButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                employeeHomeButtonMouseClicked(evt);
+        submitBaggageButton.setBackground(new java.awt.Color(255, 255, 255));
+        submitBaggageButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        submitBaggageButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        submitBaggageButton.setText("Submit baggage");
+        submitBaggageButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        submitBaggageButton.setOpaque(true);
+        submitBaggageButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                submitBaggageButtonMouseEntered(evt);
             }
-        });
-        employeeHomeButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                employeeHomeButtonActionPerformed(evt);
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                submitBaggageButtonMouseExited(evt);
             }
         });
 
-        employeeSearchButton.setText("Search");
-        employeeSearchButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                employeeSearchButtonMouseClicked(evt);
+        helpButton.setBackground(new java.awt.Color(255, 255, 255));
+        helpButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        helpButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        helpButton.setText("Help");
+        helpButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        helpButton.setOpaque(true);
+        helpButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                helpButtonMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                helpButtonMouseExited(evt);
             }
         });
 
@@ -183,31 +213,28 @@ public class Employee extends javax.swing.JFrame {
         menu.setLayout(menuLayout);
         menuLayout.setHorizontalGroup(
             menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(menuLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(employeeHomeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(employeeSearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(addBaggageButtom, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(submitRequestButtom, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(helpButtom, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addComponent(homeButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(searchButton, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
+            .addComponent(addBaggageButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(submitBaggageButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(helpButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         menuLayout.setVerticalGroup(
             menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(menuLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(employeeHomeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(employeeSearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(addBaggageButtom, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(submitRequestButtom, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(helpButtom, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(homeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1, 1, 1)
+                .addComponent(searchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1, 1, 1)
+                .addComponent(addBaggageButton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1, 1, 1)
+                .addComponent(submitBaggageButton, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(helpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 144, Short.MAX_VALUE))
         );
 
-        getContentPane().add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 150, 410));
+        getContentPane().add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 180, 178, 410));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/layoutCorendonFinalVeranderd.png"))); // NOI18N
 
@@ -225,38 +252,45 @@ public class Employee extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_LogoutActionPerformed
 
-    private void helpButtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helpButtomActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_helpButtomActionPerformed
+    private void homeButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButtonMouseEntered
+        homeButton.setBackground(Color.lightGray);
+    }//GEN-LAST:event_homeButtonMouseEntered
 
-    private void addBaggageButtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBaggageButtomActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_addBaggageButtomActionPerformed
+    private void homeButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButtonMouseExited
+        homeButton.setBackground(Color.white);
+    }//GEN-LAST:event_homeButtonMouseExited
 
-    private void submitRequestButtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitRequestButtomActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_submitRequestButtomActionPerformed
+    private void searchButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchButtonMouseEntered
+        searchButton.setBackground(Color.lightGray);
+    }//GEN-LAST:event_searchButtonMouseEntered
 
-    private void employeeHomeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeeHomeButtonActionPerformed
-        jPanel1.removeAll();
-        jPanel1.revalidate();
-        jPanel1.add(employeeHome);
-        jPanel1.revalidate();
-    }//GEN-LAST:event_employeeHomeButtonActionPerformed
+    private void addBaggageButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addBaggageButtonMouseEntered
+        addBaggageButton.setBackground(Color.lightGray);
+    }//GEN-LAST:event_addBaggageButtonMouseEntered
 
-    private void employeeHomeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_employeeHomeButtonMouseClicked
-        jPanel1.removeAll();
-        jPanel1.revalidate();
-        jPanel1.add(employeeHome);
-        jPanel1.revalidate();
-    }//GEN-LAST:event_employeeHomeButtonMouseClicked
+    private void submitBaggageButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_submitBaggageButtonMouseEntered
+        submitBaggageButton.setBackground(Color.lightGray);
+    }//GEN-LAST:event_submitBaggageButtonMouseEntered
 
-    private void employeeSearchButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_employeeSearchButtonMouseClicked
-        jPanel1.removeAll();
-        jPanel1.revalidate();
-        jPanel1.add(employeeSearch);
-        jPanel1.revalidate();
-    }//GEN-LAST:event_employeeSearchButtonMouseClicked
+    private void helpButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpButtonMouseEntered
+        helpButton.setBackground(Color.lightGray);
+    }//GEN-LAST:event_helpButtonMouseEntered
+
+    private void searchButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchButtonMouseExited
+        searchButton.setBackground(Color.white);
+    }//GEN-LAST:event_searchButtonMouseExited
+
+    private void addBaggageButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addBaggageButtonMouseExited
+        addBaggageButton.setBackground(Color.white);
+    }//GEN-LAST:event_addBaggageButtonMouseExited
+
+    private void submitBaggageButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_submitBaggageButtonMouseExited
+        submitBaggageButton.setBackground(Color.white);
+    }//GEN-LAST:event_submitBaggageButtonMouseExited
+
+    private void helpButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpButtonMouseExited
+        helpButton.setBackground(Color.white);
+    }//GEN-LAST:event_helpButtonMouseExited
 
     /**
      * @param args the command line arguments
@@ -299,21 +333,21 @@ public class Employee extends javax.swing.JFrame {
     private javax.swing.JButton Logout;
     private javax.swing.JLabel Name;
     private javax.swing.JLabel SearchTitle;
-    private javax.swing.JToggleButton addBaggageButtom;
+    private javax.swing.JLabel addBaggageButton;
     private javax.swing.JLabel addBaggageTitle;
     private javax.swing.JPanel employeeAddBaggage;
     private javax.swing.JPanel employeeHelp;
     private javax.swing.JPanel employeeHome;
-    private javax.swing.JButton employeeHomeButton;
     private javax.swing.JPanel employeeSearch;
-    private javax.swing.JButton employeeSearchButton;
     private javax.swing.JPanel employeeSubmitRequest;
-    private javax.swing.JToggleButton helpButtom;
+    private javax.swing.JLabel helpButton;
     private javax.swing.JLabel helpTitle;
+    private javax.swing.JLabel homeButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel menu;
-    private javax.swing.JToggleButton submitRequestButtom;
+    private javax.swing.JLabel searchButton;
+    private javax.swing.JLabel submitBaggageButton;
     private javax.swing.JLabel submitRequestTitle;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
