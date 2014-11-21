@@ -38,6 +38,16 @@ public class Manager extends javax.swing.JFrame {
         ID = new javax.swing.JLabel();
         Logout = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
+        ManagerHome = new javax.swing.JPanel();
+        helpTitle1 = new javax.swing.JLabel();
+        menu = new javax.swing.JPanel();
+        homeButton = new javax.swing.JLabel();
+        searchButton = new javax.swing.JLabel();
+        StatusButton = new javax.swing.JLabel();
+        LogfilesButton = new javax.swing.JLabel();
+        Graphbutton = new javax.swing.JLabel();
+        helpButton1 = new javax.swing.JLabel();
+        Background = new javax.swing.JLabel();
         ManagerSearch = new javax.swing.JPanel();
         addBaggageTitle = new javax.swing.JLabel();
         Managerstatus = new javax.swing.JPanel();
@@ -48,14 +58,6 @@ public class Manager extends javax.swing.JFrame {
         submitRequestTitle = new javax.swing.JLabel();
         ManagerGraphs = new javax.swing.JPanel();
         helpTitle = new javax.swing.JLabel();
-        menu = new javax.swing.JPanel();
-        homeButton = new javax.swing.JLabel();
-        searchButton = new javax.swing.JLabel();
-        addBaggageButton = new javax.swing.JLabel();
-        submitBaggageButton = new javax.swing.JLabel();
-        helpButton = new javax.swing.JLabel();
-        helpButton1 = new javax.swing.JLabel();
-        Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Lost Baggage");
@@ -84,52 +86,16 @@ public class Manager extends javax.swing.JFrame {
         getContentPane().add(Logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 90, 70, 30));
 
         jPanel1.setBackground(new java.awt.Color(153, 51, 51));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.setLayout(new java.awt.BorderLayout());
 
-        ManagerSearch.setBackground(new java.awt.Color(153, 51, 51));
-        ManagerSearch.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        ManagerHome.setBackground(new java.awt.Color(153, 51, 51));
+        ManagerHome.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        addBaggageTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        addBaggageTitle.setText("Add Baggage");
-        ManagerSearch.add(addBaggageTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
+        helpTitle1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        helpTitle1.setText("Welkom Manager,");
+        ManagerHome.add(helpTitle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 50, -1, -1));
 
-        jPanel1.add(ManagerSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 470));
-
-        Managerstatus.setBackground(new java.awt.Color(153, 51, 51));
-        Managerstatus.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        SearchTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        SearchTitle.setText("Search");
-        Managerstatus.add(SearchTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
-
-        jPanel1.add(Managerstatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 470));
-
-        ManagerLogfiles.setBackground(new java.awt.Color(153, 51, 51));
-        ManagerLogfiles.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Home");
-        ManagerLogfiles.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
-
-        jPanel1.add(ManagerLogfiles, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 440));
-
-        Managerhelp.setBackground(new java.awt.Color(153, 51, 51));
-        Managerhelp.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        submitRequestTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        submitRequestTitle.setText("Submit Request");
-        Managerhelp.add(submitRequestTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
-
-        jPanel1.add(Managerhelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 470));
-
-        ManagerGraphs.setBackground(new java.awt.Color(153, 51, 51));
-        ManagerGraphs.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        helpTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        helpTitle.setText("Help");
-        ManagerGraphs.add(helpTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
-
-        jPanel1.add(ManagerGraphs, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 470));
+        jPanel1.add(ManagerHome, java.awt.BorderLayout.LINE_START);
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 140, 990, 500));
 
@@ -142,6 +108,9 @@ public class Manager extends javax.swing.JFrame {
         homeButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         homeButton.setOpaque(true);
         homeButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                homeButtonMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 homeButtonMouseEntered(evt);
             }
@@ -157,6 +126,9 @@ public class Manager extends javax.swing.JFrame {
         searchButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         searchButton.setOpaque(true);
         searchButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                searchButtonMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 searchButtonMouseEntered(evt);
             }
@@ -165,48 +137,57 @@ public class Manager extends javax.swing.JFrame {
             }
         });
 
-        addBaggageButton.setBackground(new java.awt.Color(255, 255, 255));
-        addBaggageButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        addBaggageButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        addBaggageButton.setText("Status");
-        addBaggageButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        addBaggageButton.setOpaque(true);
-        addBaggageButton.addMouseListener(new java.awt.event.MouseAdapter() {
+        StatusButton.setBackground(new java.awt.Color(255, 255, 255));
+        StatusButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        StatusButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        StatusButton.setText("Status");
+        StatusButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        StatusButton.setOpaque(true);
+        StatusButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                StatusButtonMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                addBaggageButtonMouseEntered(evt);
+                StatusButtonMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                addBaggageButtonMouseExited(evt);
+                StatusButtonMouseExited(evt);
             }
         });
 
-        submitBaggageButton.setBackground(new java.awt.Color(255, 255, 255));
-        submitBaggageButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        submitBaggageButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        submitBaggageButton.setText("Log files");
-        submitBaggageButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        submitBaggageButton.setOpaque(true);
-        submitBaggageButton.addMouseListener(new java.awt.event.MouseAdapter() {
+        LogfilesButton.setBackground(new java.awt.Color(255, 255, 255));
+        LogfilesButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        LogfilesButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LogfilesButton.setText("Log files");
+        LogfilesButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        LogfilesButton.setOpaque(true);
+        LogfilesButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LogfilesButtonMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                submitBaggageButtonMouseEntered(evt);
+                LogfilesButtonMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                submitBaggageButtonMouseExited(evt);
+                LogfilesButtonMouseExited(evt);
             }
         });
 
-        helpButton.setBackground(new java.awt.Color(255, 255, 255));
-        helpButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        helpButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        helpButton.setText("Graphs");
-        helpButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        helpButton.setOpaque(true);
-        helpButton.addMouseListener(new java.awt.event.MouseAdapter() {
+        Graphbutton.setBackground(new java.awt.Color(255, 255, 255));
+        Graphbutton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Graphbutton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Graphbutton.setText("Graphs");
+        Graphbutton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Graphbutton.setOpaque(true);
+        Graphbutton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                GraphbuttonMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                helpButtonMouseEntered(evt);
+                GraphbuttonMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                helpButtonMouseExited(evt);
+                GraphbuttonMouseExited(evt);
             }
         });
 
@@ -217,6 +198,9 @@ public class Manager extends javax.swing.JFrame {
         helpButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         helpButton1.setOpaque(true);
         helpButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                helpButton1MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 helpButton1MouseEntered(evt);
             }
@@ -231,9 +215,9 @@ public class Manager extends javax.swing.JFrame {
             menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(homeButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(searchButton, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
-            .addComponent(addBaggageButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(submitBaggageButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(helpButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(StatusButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(LogfilesButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(Graphbutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menuLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(helpButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -246,11 +230,11 @@ public class Manager extends javax.swing.JFrame {
                 .addGap(1, 1, 1)
                 .addComponent(searchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1)
-                .addComponent(addBaggageButton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(StatusButton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1)
-                .addComponent(submitBaggageButton, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(LogfilesButton, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(helpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Graphbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(helpButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 84, Short.MAX_VALUE))
@@ -264,6 +248,51 @@ public class Manager extends javax.swing.JFrame {
         bindingGroup.addBinding(binding);
 
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 650));
+
+        ManagerSearch.setBackground(new java.awt.Color(153, 51, 51));
+        ManagerSearch.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        addBaggageTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        addBaggageTitle.setText("Search");
+        ManagerSearch.add(addBaggageTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
+
+        getContentPane().add(ManagerSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 470));
+
+        Managerstatus.setBackground(new java.awt.Color(153, 51, 51));
+        Managerstatus.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        SearchTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        SearchTitle.setText("Search");
+        Managerstatus.add(SearchTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
+
+        getContentPane().add(Managerstatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 470));
+
+        ManagerLogfiles.setBackground(new java.awt.Color(153, 51, 51));
+        ManagerLogfiles.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setText("Manager Logfiles");
+        ManagerLogfiles.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
+
+        getContentPane().add(ManagerLogfiles, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 440));
+
+        Managerhelp.setBackground(new java.awt.Color(153, 51, 51));
+        Managerhelp.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        submitRequestTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        submitRequestTitle.setText("Help");
+        Managerhelp.add(submitRequestTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
+
+        getContentPane().add(Managerhelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 470));
+
+        ManagerGraphs.setBackground(new java.awt.Color(153, 51, 51));
+        ManagerGraphs.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        helpTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        helpTitle.setText("Graphs");
+        ManagerGraphs.add(helpTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
+
+        getContentPane().add(ManagerGraphs, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 470));
 
         bindingGroup.bind();
 
@@ -286,41 +315,89 @@ public class Manager extends javax.swing.JFrame {
         searchButton.setBackground(Color.lightGray);
     }//GEN-LAST:event_searchButtonMouseEntered
 
-    private void addBaggageButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addBaggageButtonMouseEntered
-        addBaggageButton.setBackground(Color.lightGray);
-    }//GEN-LAST:event_addBaggageButtonMouseEntered
+    private void StatusButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StatusButtonMouseEntered
+        StatusButton.setBackground(Color.lightGray);
+    }//GEN-LAST:event_StatusButtonMouseEntered
 
-    private void submitBaggageButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_submitBaggageButtonMouseEntered
-        submitBaggageButton.setBackground(Color.lightGray);
-    }//GEN-LAST:event_submitBaggageButtonMouseEntered
+    private void LogfilesButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogfilesButtonMouseEntered
+        LogfilesButton.setBackground(Color.lightGray);
+    }//GEN-LAST:event_LogfilesButtonMouseEntered
 
-    private void helpButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpButtonMouseEntered
-        helpButton.setBackground(Color.lightGray);
-    }//GEN-LAST:event_helpButtonMouseEntered
+    private void GraphbuttonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GraphbuttonMouseEntered
+        Graphbutton.setBackground(Color.lightGray);
+    }//GEN-LAST:event_GraphbuttonMouseEntered
 
     private void searchButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchButtonMouseExited
         searchButton.setBackground(Color.white);
     }//GEN-LAST:event_searchButtonMouseExited
 
-    private void addBaggageButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addBaggageButtonMouseExited
-        addBaggageButton.setBackground(Color.white);
-    }//GEN-LAST:event_addBaggageButtonMouseExited
+    private void StatusButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StatusButtonMouseExited
+        StatusButton.setBackground(Color.white);
+    }//GEN-LAST:event_StatusButtonMouseExited
 
-    private void submitBaggageButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_submitBaggageButtonMouseExited
-        submitBaggageButton.setBackground(Color.white);
-    }//GEN-LAST:event_submitBaggageButtonMouseExited
+    private void LogfilesButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogfilesButtonMouseExited
+        LogfilesButton.setBackground(Color.white);
+    }//GEN-LAST:event_LogfilesButtonMouseExited
 
-    private void helpButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpButtonMouseExited
-        helpButton.setBackground(Color.white);
-    }//GEN-LAST:event_helpButtonMouseExited
+    private void GraphbuttonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GraphbuttonMouseExited
+        Graphbutton.setBackground(Color.white);
+    }//GEN-LAST:event_GraphbuttonMouseExited
 
     private void helpButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpButton1MouseEntered
-        // TODO add your handling code here:
+        helpButton1.setBackground(Color.LIGHT_GRAY);
     }//GEN-LAST:event_helpButton1MouseEntered
 
     private void helpButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpButton1MouseExited
-        // TODO add your handling code here:
+        helpButton1.setBackground(Color.white);
     }//GEN-LAST:event_helpButton1MouseExited
+
+    private void homeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButtonMouseClicked
+         jPanel1.removeAll();
+        jPanel1.revalidate();
+        jPanel1.add(ManagerHome);
+        jPanel1.repaint();
+        jPanel1.revalidate();
+    }//GEN-LAST:event_homeButtonMouseClicked
+
+    private void searchButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchButtonMouseClicked
+        jPanel1.removeAll();
+        jPanel1.revalidate();
+        jPanel1.add(ManagerSearch);
+        jPanel1.repaint();
+        jPanel1.revalidate();
+    }//GEN-LAST:event_searchButtonMouseClicked
+
+    private void StatusButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StatusButtonMouseClicked
+      jPanel1.removeAll();
+        jPanel1.revalidate();
+        jPanel1.add(Managerstatus);
+        jPanel1.repaint();
+        jPanel1.revalidate();
+    }//GEN-LAST:event_StatusButtonMouseClicked
+
+    private void LogfilesButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogfilesButtonMouseClicked
+        jPanel1.removeAll();
+        jPanel1.revalidate();
+        jPanel1.add(ManagerLogfiles);
+        jPanel1.repaint();
+        jPanel1.revalidate();
+    }//GEN-LAST:event_LogfilesButtonMouseClicked
+
+    private void GraphbuttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GraphbuttonMouseClicked
+        jPanel1.removeAll();
+        jPanel1.revalidate();
+        jPanel1.add(ManagerGraphs);
+        jPanel1.repaint();
+        jPanel1.revalidate();
+    }//GEN-LAST:event_GraphbuttonMouseClicked
+
+    private void helpButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpButton1MouseClicked
+        jPanel1.removeAll();
+        jPanel1.revalidate();
+        jPanel1.add(Managerhelp);
+        jPanel1.repaint();
+        jPanel1.revalidate();
+    }//GEN-LAST:event_helpButton1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -360,26 +437,28 @@ public class Manager extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
+    private javax.swing.JLabel Graphbutton;
     private javax.swing.JLabel ID;
+    private javax.swing.JLabel LogfilesButton;
     private javax.swing.JButton Logout;
     private javax.swing.JPanel ManagerGraphs;
+    private javax.swing.JPanel ManagerHome;
     private javax.swing.JPanel ManagerLogfiles;
     private javax.swing.JPanel ManagerSearch;
     private javax.swing.JPanel Managerhelp;
     private javax.swing.JPanel Managerstatus;
     private javax.swing.JLabel Name;
     private javax.swing.JLabel SearchTitle;
-    private javax.swing.JLabel addBaggageButton;
+    private javax.swing.JLabel StatusButton;
     private javax.swing.JLabel addBaggageTitle;
-    private javax.swing.JLabel helpButton;
     private javax.swing.JLabel helpButton1;
     private javax.swing.JLabel helpTitle;
+    private javax.swing.JLabel helpTitle1;
     private javax.swing.JLabel homeButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel menu;
     private javax.swing.JLabel searchButton;
-    private javax.swing.JLabel submitBaggageButton;
     private javax.swing.JLabel submitRequestTitle;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
