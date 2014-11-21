@@ -38,6 +38,8 @@ public class Employee extends javax.swing.JFrame {
         ID = new javax.swing.JLabel();
         Logout = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
+        employeeHome = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         menu = new javax.swing.JPanel();
         homeButton = new javax.swing.JLabel();
         searchButton = new javax.swing.JLabel();
@@ -47,8 +49,6 @@ public class Employee extends javax.swing.JFrame {
         Background = new javax.swing.JLabel();
         employeeAddBaggage = new javax.swing.JPanel();
         addBaggageTitle = new javax.swing.JLabel();
-        employeeHome = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         employeeSearch = new javax.swing.JPanel();
         SearchTitle = new javax.swing.JLabel();
         employeeSubmitRequest = new javax.swing.JPanel();
@@ -84,6 +84,16 @@ public class Employee extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(153, 51, 51));
         jPanel1.setLayout(new java.awt.BorderLayout());
+
+        employeeHome.setBackground(new java.awt.Color(153, 51, 51));
+        employeeHome.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setText("Home");
+        employeeHome.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
+
+        jPanel1.add(employeeHome, java.awt.BorderLayout.CENTER);
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 140, 990, 500));
 
         menu.setBackground(new java.awt.Color(255, 255, 255));
@@ -220,15 +230,6 @@ public class Employee extends javax.swing.JFrame {
         employeeAddBaggage.add(addBaggageTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
 
         getContentPane().add(employeeAddBaggage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 470));
-
-        employeeHome.setBackground(new java.awt.Color(153, 51, 51));
-        employeeHome.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Home");
-        employeeHome.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
-
-        getContentPane().add(employeeHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 440));
 
         employeeSearch.setBackground(new java.awt.Color(153, 51, 51));
         employeeSearch.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
