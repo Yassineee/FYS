@@ -38,16 +38,6 @@ public class Employee extends javax.swing.JFrame {
         ID = new javax.swing.JLabel();
         Logout = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        employeeAddBaggage = new javax.swing.JPanel();
-        addBaggageTitle = new javax.swing.JLabel();
-        employeeSearch = new javax.swing.JPanel();
-        SearchTitle = new javax.swing.JLabel();
-        employeeHome = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        employeeSubmitRequest = new javax.swing.JPanel();
-        submitRequestTitle = new javax.swing.JLabel();
-        employeeHelp = new javax.swing.JPanel();
-        helpTitle = new javax.swing.JLabel();
         menu = new javax.swing.JPanel();
         homeButton = new javax.swing.JLabel();
         searchButton = new javax.swing.JLabel();
@@ -55,6 +45,16 @@ public class Employee extends javax.swing.JFrame {
         submitBaggageButton = new javax.swing.JLabel();
         helpButton = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
+        employeeAddBaggage = new javax.swing.JPanel();
+        addBaggageTitle = new javax.swing.JLabel();
+        employeeHome = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        employeeSearch = new javax.swing.JPanel();
+        SearchTitle = new javax.swing.JLabel();
+        employeeSubmitRequest = new javax.swing.JPanel();
+        submitRequestTitle = new javax.swing.JLabel();
+        employeeHelp = new javax.swing.JPanel();
+        helpTitle = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Lost Baggage");
@@ -83,53 +83,7 @@ public class Employee extends javax.swing.JFrame {
         getContentPane().add(Logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 90, 70, 30));
 
         jPanel1.setBackground(new java.awt.Color(153, 51, 51));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        employeeAddBaggage.setBackground(new java.awt.Color(153, 51, 51));
-        employeeAddBaggage.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        addBaggageTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        addBaggageTitle.setText("Add Baggage");
-        employeeAddBaggage.add(addBaggageTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
-
-        jPanel1.add(employeeAddBaggage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 470));
-
-        employeeSearch.setBackground(new java.awt.Color(153, 51, 51));
-        employeeSearch.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        SearchTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        SearchTitle.setText("Search");
-        employeeSearch.add(SearchTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
-
-        jPanel1.add(employeeSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 470));
-
-        employeeHome.setBackground(new java.awt.Color(153, 51, 51));
-        employeeHome.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Home");
-        employeeHome.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
-
-        jPanel1.add(employeeHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 440));
-
-        employeeSubmitRequest.setBackground(new java.awt.Color(153, 51, 51));
-        employeeSubmitRequest.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        submitRequestTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        submitRequestTitle.setText("Submit Request");
-        employeeSubmitRequest.add(submitRequestTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
-
-        jPanel1.add(employeeSubmitRequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 470));
-
-        employeeHelp.setBackground(new java.awt.Color(153, 51, 51));
-        employeeHelp.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        helpTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        helpTitle.setText("Help");
-        employeeHelp.add(helpTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
-
-        jPanel1.add(employeeHelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 470));
-
+        jPanel1.setLayout(new java.awt.BorderLayout());
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 140, 990, 500));
 
         menu.setBackground(new java.awt.Color(255, 255, 255));
@@ -141,6 +95,9 @@ public class Employee extends javax.swing.JFrame {
         homeButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         homeButton.setOpaque(true);
         homeButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                homeButtonMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 homeButtonMouseEntered(evt);
             }
@@ -156,6 +113,9 @@ public class Employee extends javax.swing.JFrame {
         searchButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         searchButton.setOpaque(true);
         searchButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                searchButtonMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 searchButtonMouseEntered(evt);
             }
@@ -171,6 +131,9 @@ public class Employee extends javax.swing.JFrame {
         addBaggageButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         addBaggageButton.setOpaque(true);
         addBaggageButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                addBaggageButtonMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 addBaggageButtonMouseEntered(evt);
             }
@@ -186,6 +149,9 @@ public class Employee extends javax.swing.JFrame {
         submitBaggageButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         submitBaggageButton.setOpaque(true);
         submitBaggageButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                submitBaggageButtonMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 submitBaggageButtonMouseEntered(evt);
             }
@@ -201,6 +167,9 @@ public class Employee extends javax.swing.JFrame {
         helpButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         helpButton.setOpaque(true);
         helpButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                helpButtonMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 helpButtonMouseEntered(evt);
             }
@@ -242,6 +211,51 @@ public class Employee extends javax.swing.JFrame {
         bindingGroup.addBinding(binding);
 
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 650));
+
+        employeeAddBaggage.setBackground(new java.awt.Color(153, 51, 51));
+        employeeAddBaggage.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        addBaggageTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        addBaggageTitle.setText("Add Baggage");
+        employeeAddBaggage.add(addBaggageTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
+
+        getContentPane().add(employeeAddBaggage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 470));
+
+        employeeHome.setBackground(new java.awt.Color(153, 51, 51));
+        employeeHome.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setText("Home");
+        employeeHome.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
+
+        getContentPane().add(employeeHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 440));
+
+        employeeSearch.setBackground(new java.awt.Color(153, 51, 51));
+        employeeSearch.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        SearchTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        SearchTitle.setText("Search");
+        employeeSearch.add(SearchTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
+
+        getContentPane().add(employeeSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 470));
+
+        employeeSubmitRequest.setBackground(new java.awt.Color(153, 51, 51));
+        employeeSubmitRequest.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        submitRequestTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        submitRequestTitle.setText("Submit Request");
+        employeeSubmitRequest.add(submitRequestTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
+
+        getContentPane().add(employeeSubmitRequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 470));
+
+        employeeHelp.setBackground(new java.awt.Color(153, 51, 51));
+        employeeHelp.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        helpTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        helpTitle.setText("Help");
+        employeeHelp.add(helpTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
+
+        getContentPane().add(employeeHelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 470));
 
         bindingGroup.bind();
 
@@ -291,6 +305,46 @@ public class Employee extends javax.swing.JFrame {
     private void helpButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpButtonMouseExited
         helpButton.setBackground(Color.white);
     }//GEN-LAST:event_helpButtonMouseExited
+
+    private void homeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButtonMouseClicked
+        jPanel1.removeAll();
+        jPanel1.revalidate();
+        jPanel1.add(employeeHome);
+        jPanel1.repaint();
+        jPanel1.revalidate();
+    }//GEN-LAST:event_homeButtonMouseClicked
+
+    private void searchButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchButtonMouseClicked
+        jPanel1.removeAll();
+        jPanel1.revalidate();
+        jPanel1.add(employeeSearch);
+        jPanel1.repaint();
+        jPanel1.revalidate();
+    }//GEN-LAST:event_searchButtonMouseClicked
+
+    private void addBaggageButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addBaggageButtonMouseClicked
+        jPanel1.removeAll();
+        jPanel1.revalidate();
+        jPanel1.add(employeeAddBaggage);
+        jPanel1.repaint();
+        jPanel1.revalidate();
+    }//GEN-LAST:event_addBaggageButtonMouseClicked
+
+    private void submitBaggageButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_submitBaggageButtonMouseClicked
+        jPanel1.removeAll();
+        jPanel1.revalidate();
+        jPanel1.add(employeeSubmitRequest);
+        jPanel1.repaint();
+        jPanel1.revalidate();
+    }//GEN-LAST:event_submitBaggageButtonMouseClicked
+
+    private void helpButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpButtonMouseClicked
+        jPanel1.removeAll();
+        jPanel1.revalidate();
+        jPanel1.add(employeeHelp);
+        jPanel1.repaint();
+        jPanel1.revalidate();
+    }//GEN-LAST:event_helpButtonMouseClicked
 
     /**
      * @param args the command line arguments
