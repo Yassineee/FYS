@@ -150,11 +150,11 @@ public class Admin extends javax.swing.JFrame {
 
         Name.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Name.setText("Logged in as:");
-        getContentPane().add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 150, 40));
+        getContentPane().add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 140, 30));
 
         ID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        ID.setText("Employee ID:");
-        getContentPane().add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 90, 130, 40));
+        ID.setText("Admin ID:");
+        getContentPane().add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 90, 130, 30));
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 6));
         jPanel1.setLayout(new java.awt.BorderLayout());

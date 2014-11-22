@@ -8,7 +8,6 @@
  * @author Edo
  */
 public class Main {
-    static int ICONIFIED;
 
     /**
      * @param args the command line arguments

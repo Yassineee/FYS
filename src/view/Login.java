@@ -20,6 +20,11 @@ public class Login extends javax.swing.JFrame {
      * Creates new form Login
      */
     public Login() {
+        setSize(601,301);
+        setResizable(false);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setUndecorated(true);
+        setVisible(true);
         initComponents();
     }
     
@@ -42,6 +47,7 @@ public class Login extends javax.swing.JFrame {
     private void initComponents() {
         bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
+        loginPanel = new javax.swing.JPanel();
         Mini = new javax.swing.JLabel();
         Exit = new javax.swing.JLabel();
         DragFrame = new javax.swing.JLabel();
@@ -52,7 +58,9 @@ public class Login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        loginPanel.setPreferredSize(new java.awt.Dimension(600, 300));
+        loginPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Mini.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Mini.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -60,7 +68,7 @@ public class Login extends javax.swing.JFrame {
                 MiniMouseClicked(evt);
             }
         });
-        getContentPane().add(Mini, new org.netbeans.lib.awtextra.AbsoluteConstraints(553, 4, 16, 17));
+        loginPanel.add(Mini, new org.netbeans.lib.awtextra.AbsoluteConstraints(553, 4, 16, 17));
 
         Exit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Exit.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -68,7 +76,7 @@ public class Login extends javax.swing.JFrame {
                 ExitMouseClicked(evt);
             }
         });
-        getContentPane().add(Exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 4, 16, 17));
+        loginPanel.add(Exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 4, 16, 17));
 
         DragFrame.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -80,7 +88,7 @@ public class Login extends javax.swing.JFrame {
                 DragFrameMousePressed(evt);
             }
         });
-        getContentPane().add(DragFrame, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 30));
+        loginPanel.add(DragFrame, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 30));
 
         username.setBackground(new java.awt.Color(111, 13, 17));
         username.setForeground(new java.awt.Color(250, 250, 250));
@@ -91,13 +99,13 @@ public class Login extends javax.swing.JFrame {
                 usernameActionPerformed(evt);
             }
         });
-        getContentPane().add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 152, 250, 20));
+        loginPanel.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 152, 250, 20));
 
         password.setBackground(new java.awt.Color(111, 13, 17));
         password.setForeground(new java.awt.Color(250, 250, 250));
         password.setText("jPasswordField1");
         password.setBorder(null);
-        getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 200, 250, 20));
+        loginPanel.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 200, 250, 20));
 
         loginButoon.setBackground(new java.awt.Color(179, 15, 22));
         loginButoon.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -117,14 +125,16 @@ public class Login extends javax.swing.JFrame {
                 loginButoonMouseExited(evt);
             }
         });
-        getContentPane().add(loginButoon, new org.netbeans.lib.awtextra.AbsoluteConstraints(284, 230, 70, 30));
+        loginPanel.add(loginButoon, new org.netbeans.lib.awtextra.AbsoluteConstraints(284, 230, 70, 30));
 
         Achtergrond.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/LoginScherm2.png"))); // NOI18N
 
         org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, Achtergrond, org.jdesktop.beansbinding.ELProperty.create("${background}"), Achtergrond, org.jdesktop.beansbinding.BeanProperty.create("background"));
         bindingGroup.addBinding(binding);
 
-        getContentPane().add(Achtergrond, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        loginPanel.add(Achtergrond, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        getContentPane().add(loginPanel, java.awt.BorderLayout.CENTER);
 
         bindingGroup.bind();
 
@@ -233,6 +243,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel Exit;
     private javax.swing.JLabel Mini;
     private javax.swing.JLabel loginButoon;
+    private javax.swing.JPanel loginPanel;
     private javax.swing.JPasswordField password;
     private javax.swing.JTextField username;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
